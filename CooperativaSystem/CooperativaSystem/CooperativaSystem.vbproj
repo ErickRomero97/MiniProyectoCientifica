@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3DBCBB7D-7DD8-4667-8094-9F18C488BC99}</ProjectGuid>
+    <ProjectGuid>{B9996F9B-3E2C-41A1-825A-6605742D716A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Cooperativa.My.MyApplication</StartupObject>
-    <RootNamespace>Cooperativa</RootNamespace>
-    <AssemblyName>Cooperativa</AssemblyName>
+    <StartupObject>CooperativaSystem.My.MyApplication</StartupObject>
+    <RootNamespace>CooperativaSystem</RootNamespace>
+    <AssemblyName>CooperativaSystem</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Cooperativa.xml</DocumentationFile>
+    <DocumentationFile>CooperativaSystem.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Cooperativa.xml</DocumentationFile>
+    <DocumentationFile>CooperativaSystem.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -72,11 +72,30 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexion.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNacionalidad.Designer.vb">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNacionalidad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProfesion.Designer.vb">
+      <DependentUpon>FrmProfesion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmProfesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipoCuenta.Designer.vb">
+      <DependentUpon>FrmTipoCuenta.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTipoCuenta.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,6 +115,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNacionalidad.resx">
+      <DependentUpon>FrmNacionalidad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmProfesion.resx">
+      <DependentUpon>FrmProfesion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipoCuenta.resx">
+      <DependentUpon>FrmTipoCuenta.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
