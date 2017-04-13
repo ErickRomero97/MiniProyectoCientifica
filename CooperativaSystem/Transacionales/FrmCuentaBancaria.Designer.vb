@@ -68,9 +68,8 @@ Partial Class FrmCuentaBancaria
         Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblCancelar.Location = New System.Drawing.Point(450, 305)
         Me.LblCancelar.Name = "LblCancelar"
-        Me.LblCancelar.Size = New System.Drawing.Size(56, 15)
+        Me.LblCancelar.Size = New System.Drawing.Size(0, 15)
         Me.LblCancelar.TabIndex = 123
-        Me.LblCancelar.Text = "Cancelar"
         '
         'LblEditar
         '
@@ -79,9 +78,8 @@ Partial Class FrmCuentaBancaria
         Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblEditar.Location = New System.Drawing.Point(351, 307)
         Me.LblEditar.Name = "LblEditar"
-        Me.LblEditar.Size = New System.Drawing.Size(39, 15)
+        Me.LblEditar.Size = New System.Drawing.Size(0, 15)
         Me.LblEditar.TabIndex = 124
-        Me.LblEditar.Text = "Editar"
         '
         'LblGuardar
         '
@@ -90,9 +88,8 @@ Partial Class FrmCuentaBancaria
         Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblGuardar.Location = New System.Drawing.Point(254, 307)
         Me.LblGuardar.Name = "LblGuardar"
-        Me.LblGuardar.Size = New System.Drawing.Size(52, 15)
+        Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
         Me.LblGuardar.TabIndex = 125
-        Me.LblGuardar.Text = "Guardar"
         '
         'LblNuevo
         '
@@ -101,9 +98,8 @@ Partial Class FrmCuentaBancaria
         Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LblNuevo.Location = New System.Drawing.Point(181, 307)
         Me.LblNuevo.Name = "LblNuevo"
-        Me.LblNuevo.Size = New System.Drawing.Size(42, 15)
+        Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
         Me.LblNuevo.TabIndex = 126
-        Me.LblNuevo.Text = "Nuevo"
         '
         'BtnCancelar
         '

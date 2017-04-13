@@ -33,10 +33,10 @@ Partial Class FrmUsuario
         Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.LblCancelar = New System.Windows.Forms.Label()
+        Me.LblEditar = New System.Windows.Forms.Label()
+        Me.LblGuardar = New System.Windows.Forms.Label()
+        Me.LblNuevo = New System.Windows.Forms.Label()
         Me.GbDatos = New System.Windows.Forms.GroupBox()
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.MtbCodigoOficial = New System.Windows.Forms.MaskedTextBox()
@@ -97,10 +97,10 @@ Partial Class FrmUsuario
         Me.TbpGestion.Controls.Add(Me.BtnNuevo)
         Me.TbpGestion.Controls.Add(Me.BtnEditar)
         Me.TbpGestion.Controls.Add(Me.BtnCancelar)
-        Me.TbpGestion.Controls.Add(Me.Label7)
-        Me.TbpGestion.Controls.Add(Me.Label8)
-        Me.TbpGestion.Controls.Add(Me.Label9)
-        Me.TbpGestion.Controls.Add(Me.Label10)
+        Me.TbpGestion.Controls.Add(Me.LblCancelar)
+        Me.TbpGestion.Controls.Add(Me.LblEditar)
+        Me.TbpGestion.Controls.Add(Me.LblGuardar)
+        Me.TbpGestion.Controls.Add(Me.LblNuevo)
         Me.TbpGestion.Controls.Add(Me.GbDatos)
         Me.TbpGestion.Location = New System.Drawing.Point(4, 22)
         Me.TbpGestion.Name = "TbpGestion"
@@ -181,49 +181,45 @@ Partial Class FrmUsuario
         Me.BtnCancelar.TabIndex = 139
         Me.BtnCancelar.UseVisualStyleBackColor = False
         '
-        'Label7
+        'LblCancelar
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(329, 423)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 15)
-        Me.Label7.TabIndex = 135
-        Me.Label7.Text = "Cancelar"
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(329, 423)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(0, 15)
+        Me.LblCancelar.TabIndex = 135
         '
-        'Label8
+        'LblEditar
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(253, 423)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 15)
-        Me.Label8.TabIndex = 136
-        Me.Label8.Text = "Editar"
+        Me.LblEditar.AutoSize = True
+        Me.LblEditar.BackColor = System.Drawing.Color.Transparent
+        Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEditar.Location = New System.Drawing.Point(253, 423)
+        Me.LblEditar.Name = "LblEditar"
+        Me.LblEditar.Size = New System.Drawing.Size(0, 15)
+        Me.LblEditar.TabIndex = 136
         '
-        'Label9
+        'LblGuardar
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(168, 423)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(52, 15)
-        Me.Label9.TabIndex = 137
-        Me.Label9.Text = "Guardar"
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(168, 423)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
+        Me.LblGuardar.TabIndex = 137
         '
-        'Label10
+        'LblNuevo
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(97, 423)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(42, 15)
-        Me.Label10.TabIndex = 138
-        Me.Label10.Text = "Nuevo"
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(97, 423)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
+        Me.LblNuevo.TabIndex = 138
         '
         'GbDatos
         '
@@ -452,10 +448,10 @@ Partial Class FrmUsuario
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TbcUsuario As TabControl
     Friend WithEvents TbpGestion As TabPage
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents LblCancelar As Label
+    Friend WithEvents LblEditar As Label
+    Friend WithEvents LblGuardar As Label
+    Friend WithEvents LblNuevo As Label
     Friend WithEvents GbDatos As GroupBox
     Friend WithEvents BtnBuscar As Button
     Friend WithEvents MtbCodigoOficial As MaskedTextBox

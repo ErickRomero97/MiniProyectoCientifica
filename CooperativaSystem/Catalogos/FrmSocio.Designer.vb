@@ -26,7 +26,9 @@ Partial Class FrmSocio
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSocio))
         Me.TbcSocio = New System.Windows.Forms.TabControl()
         Me.TPGestionSocio = New System.Windows.Forms.TabPage()
-        Me.btnInsertar = New System.Windows.Forms.Button()
+        Me.BtnEditar = New System.Windows.Forms.Button()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.GbDatos = New System.Windows.Forms.GroupBox()
         Me.TxtRTNSocio = New System.Windows.Forms.MaskedTextBox()
         Me.TxtCodSocio = New System.Windows.Forms.MaskedTextBox()
@@ -55,11 +57,10 @@ Partial Class FrmSocio
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.btnActualizar = New System.Windows.Forms.Button()
+        Me.LblEditar = New System.Windows.Forms.Label()
+        Me.LblGuardar = New System.Windows.Forms.Label()
+        Me.LblCancelar = New System.Windows.Forms.Label()
+        Me.LblNuevo = New System.Windows.Forms.Label()
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.TPListarSocio = New System.Windows.Forms.TabPage()
         Me.LsvMostrarSocio = New System.Windows.Forms.ListView()
@@ -78,7 +79,6 @@ Partial Class FrmSocio
         Me.ChProfecion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CmsOpciones = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.TbcSocio.SuspendLayout()
         Me.TPGestionSocio.SuspendLayout()
         Me.GbDatos.SuspendLayout()
@@ -100,15 +100,15 @@ Partial Class FrmSocio
         '
         Me.TPGestionSocio.BackgroundImage = CType(resources.GetObject("TPGestionSocio.BackgroundImage"), System.Drawing.Image)
         Me.TPGestionSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TPGestionSocio.Controls.Add(Me.BtnEditar)
         Me.TPGestionSocio.Controls.Add(Me.Label12)
-        Me.TPGestionSocio.Controls.Add(Me.btnInsertar)
+        Me.TPGestionSocio.Controls.Add(Me.BtnNuevo)
         Me.TPGestionSocio.Controls.Add(Me.GbDatos)
         Me.TPGestionSocio.Controls.Add(Me.btnGuardar)
-        Me.TPGestionSocio.Controls.Add(Me.Label10)
-        Me.TPGestionSocio.Controls.Add(Me.Label11)
-        Me.TPGestionSocio.Controls.Add(Me.Label13)
-        Me.TPGestionSocio.Controls.Add(Me.Label9)
-        Me.TPGestionSocio.Controls.Add(Me.btnActualizar)
+        Me.TPGestionSocio.Controls.Add(Me.LblEditar)
+        Me.TPGestionSocio.Controls.Add(Me.LblGuardar)
+        Me.TPGestionSocio.Controls.Add(Me.LblCancelar)
+        Me.TPGestionSocio.Controls.Add(Me.LblNuevo)
         Me.TPGestionSocio.Controls.Add(Me.btnCancelar)
         Me.TPGestionSocio.Location = New System.Drawing.Point(4, 22)
         Me.TPGestionSocio.Name = "TPGestionSocio"
@@ -118,21 +118,47 @@ Partial Class FrmSocio
         Me.TPGestionSocio.Text = "Gestión Socio"
         Me.TPGestionSocio.UseVisualStyleBackColor = True
         '
-        'btnInsertar
+        'BtnEditar
         '
-        Me.btnInsertar.BackColor = System.Drawing.Color.Transparent
-        Me.btnInsertar.BackgroundImage = CType(resources.GetObject("btnInsertar.BackgroundImage"), System.Drawing.Image)
-        Me.btnInsertar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.btnInsertar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnInsertar.FlatAppearance.BorderSize = 0
-        Me.btnInsertar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnInsertar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnInsertar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnInsertar.Location = New System.Drawing.Point(551, 157)
-        Me.btnInsertar.Name = "btnInsertar"
-        Me.btnInsertar.Size = New System.Drawing.Size(47, 43)
-        Me.btnInsertar.TabIndex = 72
-        Me.btnInsertar.UseVisualStyleBackColor = False
+        Me.BtnEditar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnEditar.BackgroundImage = CType(resources.GetObject("BtnEditar.BackgroundImage"), System.Drawing.Image)
+        Me.BtnEditar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnEditar.FlatAppearance.BorderSize = 0
+        Me.BtnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnEditar.Location = New System.Drawing.Point(549, 221)
+        Me.BtnEditar.Name = "BtnEditar"
+        Me.BtnEditar.Size = New System.Drawing.Size(55, 49)
+        Me.BtnEditar.TabIndex = 110
+        Me.BtnEditar.UseVisualStyleBackColor = False
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label12.Location = New System.Drawing.Point(233, 69)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(210, 33)
+        Me.Label12.TabIndex = 85
+        Me.Label12.Text = "Gestión Socio"
+        '
+        'BtnNuevo
+        '
+        Me.BtnNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.BackgroundImage = CType(resources.GetObject("BtnNuevo.BackgroundImage"), System.Drawing.Image)
+        Me.BtnNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnNuevo.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BtnNuevo.FlatAppearance.BorderSize = 0
+        Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnNuevo.Location = New System.Drawing.Point(551, 157)
+        Me.BtnNuevo.Name = "BtnNuevo"
+        Me.BtnNuevo.Size = New System.Drawing.Size(47, 43)
+        Me.BtnNuevo.TabIndex = 72
+        Me.BtnNuevo.UseVisualStyleBackColor = False
         '
         'GbDatos
         '
@@ -412,65 +438,45 @@ Partial Class FrmSocio
         Me.btnGuardar.TabIndex = 74
         Me.btnGuardar.UseVisualStyleBackColor = False
         '
-        'Label10
+        'LblEditar
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Transparent
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(543, 269)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(66, 16)
-        Me.Label10.TabIndex = 82
-        Me.Label10.Text = "Actualizar"
+        Me.LblEditar.AutoSize = True
+        Me.LblEditar.BackColor = System.Drawing.Color.Transparent
+        Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEditar.Location = New System.Drawing.Point(555, 271)
+        Me.LblEditar.Name = "LblEditar"
+        Me.LblEditar.Size = New System.Drawing.Size(0, 16)
+        Me.LblEditar.TabIndex = 82
         '
-        'Label11
+        'LblGuardar
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.BackColor = System.Drawing.Color.Transparent
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(551, 338)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(57, 16)
-        Me.Label11.TabIndex = 80
-        Me.Label11.Text = "Guardar"
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(551, 338)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(0, 16)
+        Me.LblGuardar.TabIndex = 80
         '
-        'Label13
+        'LblCancelar
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(551, 403)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(62, 16)
-        Me.Label13.TabIndex = 83
-        Me.Label13.Text = "Cancelar"
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(551, 403)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(0, 16)
+        Me.LblCancelar.TabIndex = 83
         '
-        'Label9
+        'LblNuevo
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.Transparent
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(549, 202)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(52, 16)
-        Me.Label9.TabIndex = 79
-        Me.Label9.Text = "Insertar"
-        '
-        'btnActualizar
-        '
-        Me.btnActualizar.BackColor = System.Drawing.Color.Transparent
-        Me.btnActualizar.BackgroundImage = CType(resources.GetObject("btnActualizar.BackgroundImage"), System.Drawing.Image)
-        Me.btnActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnActualizar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnActualizar.FlatAppearance.BorderSize = 0
-        Me.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnActualizar.Location = New System.Drawing.Point(549, 222)
-        Me.btnActualizar.Name = "btnActualizar"
-        Me.btnActualizar.Size = New System.Drawing.Size(47, 43)
-        Me.btnActualizar.TabIndex = 73
-        Me.btnActualizar.UseVisualStyleBackColor = False
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(549, 202)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(0, 16)
+        Me.LblNuevo.TabIndex = 79
         '
         'btnCancelar
         '
@@ -503,6 +509,7 @@ Partial Class FrmSocio
         'LsvMostrarSocio
         '
         Me.LsvMostrarSocio.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChRtnsocio, Me.ChCodSocio, Me.ChNombre, Me.ChApellido, Me.ChDireccion, Me.ChTelefono, Me.Chtelefonotrabajo, Me.ChLugar, Me.ChEmail, Me.ChSexo, Me.ChEstado, Me.ChNacionalidad, Me.ChProfecion})
+        Me.LsvMostrarSocio.ContextMenuStrip = Me.CmsOpciones
         Me.LsvMostrarSocio.FullRowSelect = True
         Me.LsvMostrarSocio.GridLines = True
         Me.LsvMostrarSocio.Location = New System.Drawing.Point(-3, 0)
@@ -583,17 +590,6 @@ Partial Class FrmSocio
         Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(108, 26)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Label12.Location = New System.Drawing.Point(233, 69)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(210, 33)
-        Me.Label12.TabIndex = 85
-        Me.Label12.Text = "Gestión Socio"
-        '
         'FrmSocio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -615,7 +611,7 @@ Partial Class FrmSocio
 
     Friend WithEvents TbcSocio As TabControl
     Friend WithEvents TPGestionSocio As TabPage
-    Friend WithEvents btnInsertar As Button
+    Friend WithEvents BtnNuevo As Button
     Friend WithEvents GbDatos As GroupBox
     Friend WithEvents TxtRTNSocio As MaskedTextBox
     Friend WithEvents TxtCodSocio As MaskedTextBox
@@ -644,11 +640,10 @@ Partial Class FrmSocio
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents btnGuardar As Button
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents btnActualizar As Button
+    Friend WithEvents LblEditar As Label
+    Friend WithEvents LblGuardar As Label
+    Friend WithEvents LblCancelar As Label
+    Friend WithEvents LblNuevo As Label
     Friend WithEvents btnCancelar As Button
     Friend WithEvents TPListarSocio As TabPage
     Friend WithEvents LsvMostrarSocio As ListView
@@ -668,4 +663,5 @@ Partial Class FrmSocio
     Friend WithEvents CmsOpciones As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label12 As Label
+    Friend WithEvents BtnEditar As Button
 End Class

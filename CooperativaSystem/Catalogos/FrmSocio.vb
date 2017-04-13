@@ -52,9 +52,9 @@ Public Class FrmSocio
         MostrarSocio()
     End Sub
     Private Sub HabilitarBotones(ByVal nuevo As Boolean, ByVal Guardar As Boolean, ByVal Editar As Boolean, ByVal Cancelar As Boolean, ByVal datos As Boolean)
-        btnInsertar.Enabled = nuevo
+        BtnNuevo.Enabled = nuevo
         btnGuardar.Enabled = Guardar
-        btnActualizar.Enabled = Editar
+        BtnEditar.Enabled = Editar
         btnCancelar.Enabled = Cancelar
         GbDatos.Enabled = datos
     End Sub
@@ -297,7 +297,7 @@ Public Class FrmSocio
         End Try
     End Sub
 
-    Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
+    Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         HabilitarBotones(False, True, False, True, True)
     End Sub
 
@@ -325,7 +325,7 @@ Public Class FrmSocio
         HabilitarBotones(True, False, False, False, False)
     End Sub
 
-    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles btnActualizar.Click
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs)
         If Validar(TxtCodSocio, "Debe ingresar el codigo del socio") Then
         ElseIf Validar(TxtRTNSocio, "Debe ingresar el RTN Socio") Then
         ElseIf Validar(TxtNombre, "Debe ingresar un nombre de empleado") Then
@@ -345,5 +345,36 @@ Public Class FrmSocio
             MostrarSocio()
             Limpiar()
         End If
+    End Sub
+    Private Sub BtnNuevo_MouseLeave(sender As Object, e As EventArgs) Handles BtnNuevo.MouseLeave
+        LblNuevo.Text = ""
+    End Sub
+
+    Private Sub BtnNuevo_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnNuevo.MouseMove
+        LblNuevo.Text = "Nuevo"
+    End Sub
+
+    Private Sub BtnGuardar_MouseLeave(sender As Object, e As EventArgs) Handles btnGuardar.MouseLeave
+        LblGuardar.Text = ""
+    End Sub
+
+    Private Sub BtnGuardar_MouseMove(sender As Object, e As MouseEventArgs) Handles btnGuardar.MouseMove
+        LblGuardar.Text = "Guardar"
+    End Sub
+
+    Private Sub BtnEditar_MouseLeave(sender As Object, e As EventArgs) Handles BtnEditar.MouseLeave
+        LblEditar.Text = ""
+    End Sub
+
+    Private Sub BtnEditar_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnEditar.MouseMove
+        LblEditar.Text = "Editar"
+    End Sub
+
+    Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) Handles btnCancelar.MouseLeave
+        LblCancelar.Text = ""
+    End Sub
+
+    Private Sub BtnCancelar_MouseMove(sender As Object, e As MouseEventArgs) Handles btnCancelar.MouseMove
+        LblCancelar.Text = "Cancelar"
     End Sub
 End Class

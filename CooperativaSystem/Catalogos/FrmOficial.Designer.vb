@@ -26,14 +26,15 @@ Partial Class FrmOficial
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOficial))
         Me.TbcOficial = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.Label13 = New System.Windows.Forms.Label()
+        Me.LblCancelar = New System.Windows.Forms.Label()
         Me.BtnNuevo = New System.Windows.Forms.Button()
-        Me.Label14 = New System.Windows.Forms.Label()
+        Me.LblEditar = New System.Windows.Forms.Label()
         Me.BtnEditar = New System.Windows.Forms.Button()
-        Me.Label15 = New System.Windows.Forms.Label()
+        Me.LblGuardar = New System.Windows.Forms.Label()
         Me.BtnCancelar = New System.Windows.Forms.Button()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.LblNuevo = New System.Windows.Forms.Label()
         Me.GbDatos = New System.Windows.Forms.GroupBox()
         Me.TxtApellido = New System.Windows.Forms.TextBox()
         Me.labelapellido = New System.Windows.Forms.Label()
@@ -57,7 +58,6 @@ Partial Class FrmOficial
         Me.ChSexo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.CmsOpcion = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.TbcOficial.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.GbDatos.SuspendLayout()
@@ -81,13 +81,13 @@ Partial Class FrmOficial
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.BtnGuardar)
-        Me.TabPage1.Controls.Add(Me.Label13)
+        Me.TabPage1.Controls.Add(Me.LblCancelar)
         Me.TabPage1.Controls.Add(Me.BtnNuevo)
-        Me.TabPage1.Controls.Add(Me.Label14)
+        Me.TabPage1.Controls.Add(Me.LblEditar)
         Me.TabPage1.Controls.Add(Me.BtnEditar)
-        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.LblGuardar)
         Me.TabPage1.Controls.Add(Me.BtnCancelar)
-        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.LblNuevo)
         Me.TabPage1.Controls.Add(Me.GbDatos)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
@@ -96,6 +96,17 @@ Partial Class FrmOficial
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Oficial"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.AliceBlue
+        Me.Label6.Location = New System.Drawing.Point(137, 55)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(222, 33)
+        Me.Label6.TabIndex = 135
+        Me.Label6.Text = "Gestión Oficial"
         '
         'BtnGuardar
         '
@@ -112,16 +123,15 @@ Partial Class FrmOficial
         Me.BtnGuardar.TabIndex = 129
         Me.BtnGuardar.UseVisualStyleBackColor = False
         '
-        'Label13
+        'LblCancelar
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(342, 376)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(56, 15)
-        Me.Label13.TabIndex = 131
-        Me.Label13.Text = "Cancelar"
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(342, 376)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(0, 15)
+        Me.LblCancelar.TabIndex = 131
         '
         'BtnNuevo
         '
@@ -138,16 +148,15 @@ Partial Class FrmOficial
         Me.BtnNuevo.TabIndex = 130
         Me.BtnNuevo.UseVisualStyleBackColor = False
         '
-        'Label14
+        'LblEditar
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(263, 376)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(39, 15)
-        Me.Label14.TabIndex = 132
-        Me.Label14.Text = "Editar"
+        Me.LblEditar.AutoSize = True
+        Me.LblEditar.BackColor = System.Drawing.Color.Transparent
+        Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEditar.Location = New System.Drawing.Point(263, 376)
+        Me.LblEditar.Name = "LblEditar"
+        Me.LblEditar.Size = New System.Drawing.Size(0, 15)
+        Me.LblEditar.TabIndex = 132
         '
         'BtnEditar
         '
@@ -164,16 +173,15 @@ Partial Class FrmOficial
         Me.BtnEditar.TabIndex = 128
         Me.BtnEditar.UseVisualStyleBackColor = False
         '
-        'Label15
+        'LblGuardar
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(183, 376)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(52, 15)
-        Me.Label15.TabIndex = 133
-        Me.Label15.Text = "Guardar"
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(183, 376)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
+        Me.LblGuardar.TabIndex = 133
         '
         'BtnCancelar
         '
@@ -190,16 +198,15 @@ Partial Class FrmOficial
         Me.BtnCancelar.TabIndex = 127
         Me.BtnCancelar.UseVisualStyleBackColor = False
         '
-        'Label19
+        'LblNuevo
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(106, 376)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(42, 15)
-        Me.Label19.TabIndex = 134
-        Me.Label19.Text = "Nuevo"
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(106, 376)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
+        Me.LblNuevo.TabIndex = 134
         '
         'GbDatos
         '
@@ -331,7 +338,7 @@ Partial Class FrmOficial
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(504, 429)
+        Me.TabPage2.Size = New System.Drawing.Size(504, 442)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Oficial"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -391,17 +398,6 @@ Partial Class FrmOficial
         Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.AliceBlue
-        Me.Label6.Location = New System.Drawing.Point(137, 55)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(222, 33)
-        Me.Label6.TabIndex = 135
-        Me.Label6.Text = "Gestión Oficial"
-        '
         'FrmOficial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -425,13 +421,13 @@ Partial Class FrmOficial
     Friend WithEvents TbcOficial As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents BtnGuardar As Button
-    Friend WithEvents Label13 As Label
+    Friend WithEvents LblCancelar As Label
     Friend WithEvents BtnNuevo As Button
-    Friend WithEvents Label14 As Label
+    Friend WithEvents LblEditar As Label
     Friend WithEvents BtnEditar As Button
-    Friend WithEvents Label15 As Label
+    Friend WithEvents LblGuardar As Label
     Friend WithEvents BtnCancelar As Button
-    Friend WithEvents Label19 As Label
+    Friend WithEvents LblNuevo As Label
     Friend WithEvents GbDatos As GroupBox
     Friend WithEvents TxtApellido As TextBox
     Friend WithEvents labelapellido As Label

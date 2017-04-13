@@ -24,10 +24,10 @@ Partial Class FrmTipoPrestamo
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoPrestamo))
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.LblCancelar = New System.Windows.Forms.Label()
+        Me.LblEditar = New System.Windows.Forms.Label()
+        Me.LblGuardar = New System.Windows.Forms.Label()
+        Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -44,61 +44,57 @@ Partial Class FrmTipoPrestamo
         Me.ChTipoPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TbcTipoPrestamo = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.GrbTipoPrestamo = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.GrbTipoPrestamo = New System.Windows.Forms.GroupBox()
         Me.CmsOpciones.SuspendLayout()
         Me.TbcTipoPrestamo.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.GrbTipoPrestamo.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        Me.GrbTipoPrestamo.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label13
+        'LblCancelar
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(426, 269)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(56, 15)
-        Me.Label13.TabIndex = 101
-        Me.Label13.Text = "Cancelar"
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(426, 269)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(0, 15)
+        Me.LblCancelar.TabIndex = 101
         '
-        'Label14
+        'LblEditar
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(342, 263)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(39, 15)
-        Me.Label14.TabIndex = 102
-        Me.Label14.Text = "Editar"
+        Me.LblEditar.AutoSize = True
+        Me.LblEditar.BackColor = System.Drawing.Color.Transparent
+        Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEditar.Location = New System.Drawing.Point(342, 263)
+        Me.LblEditar.Name = "LblEditar"
+        Me.LblEditar.Size = New System.Drawing.Size(0, 15)
+        Me.LblEditar.TabIndex = 102
         '
-        'Label15
+        'LblGuardar
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(244, 263)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(52, 15)
-        Me.Label15.TabIndex = 103
-        Me.Label15.Text = "Guardar"
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(244, 263)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
+        Me.LblGuardar.TabIndex = 103
         '
-        'Label19
+        'LblNuevo
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(161, 263)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(42, 15)
-        Me.Label19.TabIndex = 104
-        Me.Label19.Text = "Nuevo"
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(161, 263)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
+        Me.LblNuevo.TabIndex = 104
         '
         'BtnCancelar
         '
@@ -257,13 +253,13 @@ Partial Class FrmTipoPrestamo
         Me.TabPage1.Controls.Add(Me.GrbTipoPrestamo)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.BtnEditar)
-        Me.TabPage1.Controls.Add(Me.Label13)
+        Me.TabPage1.Controls.Add(Me.LblCancelar)
         Me.TabPage1.Controls.Add(Me.BtnNuevo)
-        Me.TabPage1.Controls.Add(Me.Label14)
+        Me.TabPage1.Controls.Add(Me.LblEditar)
         Me.TabPage1.Controls.Add(Me.BtnGuardar)
-        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.LblGuardar)
         Me.TabPage1.Controls.Add(Me.BtnCancelar)
-        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.LblNuevo)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -271,6 +267,18 @@ Partial Class FrmTipoPrestamo
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Tipo Prestamo"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'GrbTipoPrestamo
+        '
+        Me.GrbTipoPrestamo.Controls.Add(Me.TxtTipoPrestamo)
+        Me.GrbTipoPrestamo.Controls.Add(Me.Label11)
+        Me.GrbTipoPrestamo.Controls.Add(Me.Label1)
+        Me.GrbTipoPrestamo.Controls.Add(Me.TxtCodTipoP)
+        Me.GrbTipoPrestamo.Location = New System.Drawing.Point(93, 109)
+        Me.GrbTipoPrestamo.Name = "GrbTipoPrestamo"
+        Me.GrbTipoPrestamo.Size = New System.Drawing.Size(468, 100)
+        Me.GrbTipoPrestamo.TabIndex = 129
+        Me.GrbTipoPrestamo.TabStop = False
         '
         'Panel2
         '
@@ -300,22 +308,10 @@ Partial Class FrmTipoPrestamo
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(674, 290)
+        Me.TabPage2.Size = New System.Drawing.Size(674, 299)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Tipo Prestamo"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'GrbTipoPrestamo
-        '
-        Me.GrbTipoPrestamo.Controls.Add(Me.TxtTipoPrestamo)
-        Me.GrbTipoPrestamo.Controls.Add(Me.Label11)
-        Me.GrbTipoPrestamo.Controls.Add(Me.Label1)
-        Me.GrbTipoPrestamo.Controls.Add(Me.TxtCodTipoP)
-        Me.GrbTipoPrestamo.Location = New System.Drawing.Point(93, 109)
-        Me.GrbTipoPrestamo.Name = "GrbTipoPrestamo"
-        Me.GrbTipoPrestamo.Size = New System.Drawing.Size(468, 100)
-        Me.GrbTipoPrestamo.TabIndex = 129
-        Me.GrbTipoPrestamo.TabStop = False
         '
         'FrmTipoPrestamo
         '
@@ -329,19 +325,19 @@ Partial Class FrmTipoPrestamo
         Me.TbcTipoPrestamo.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.GrbTipoPrestamo.ResumeLayout(False)
+        Me.GrbTipoPrestamo.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        Me.GrbTipoPrestamo.ResumeLayout(False)
-        Me.GrbTipoPrestamo.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label19 As Label
+    Friend WithEvents LblCancelar As Label
+    Friend WithEvents LblEditar As Label
+    Friend WithEvents LblGuardar As Label
+    Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnGuardar As Button

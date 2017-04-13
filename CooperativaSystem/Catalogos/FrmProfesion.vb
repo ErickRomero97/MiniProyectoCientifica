@@ -253,4 +253,35 @@ Public Class FrmProfesion
         End If
         Return estado
     End Function
+    Private Sub BtnNuevo_MouseLeave(sender As Object, e As EventArgs) Handles BtnNuevo.MouseLeave
+        LblNuevo.Text = ""
+    End Sub
+
+    Private Sub BtnNuevo_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnNuevo.MouseMove
+        LblNuevo.Text = "Nuevo"
+    End Sub
+
+    Private Sub BtnGuardar_MouseLeave(sender As Object, e As EventArgs) Handles BtnGuardar.MouseLeave
+        LblGuardar.Text = ""
+    End Sub
+
+    Private Sub BtnGuardar_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnGuardar.MouseMove
+        LblGuardar.Text = "Guardar"
+    End Sub
+
+    Private Sub BtnEditar_MouseLeave(sender As Object, e As EventArgs) Handles BtnEditar.MouseLeave
+        LblEditar.Text = ""
+    End Sub
+
+    Private Sub BtnEditar_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnEditar.MouseMove
+        LblEditar.Text = "Editar"
+    End Sub
+
+    Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) Handles BtnCancelar.MouseLeave
+        LblCancelar.Text = ""
+    End Sub
+
+    Private Sub BtnCancelar_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnCancelar.MouseMove
+        LblCancelar.Text = "Cancelar"
+    End Sub
 End Class

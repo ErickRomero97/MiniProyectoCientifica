@@ -24,10 +24,10 @@ Partial Class FrmNacionalidad
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmNacionalidad))
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
+        Me.LblCancelar = New System.Windows.Forms.Label()
+        Me.LblEditar = New System.Windows.Forms.Label()
+        Me.LblGuardar = New System.Windows.Forms.Label()
+        Me.LblNuevo = New System.Windows.Forms.Label()
         Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
@@ -56,49 +56,45 @@ Partial Class FrmNacionalidad
         Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label13
+        'LblCancelar
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.Transparent
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(416, 272)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(56, 15)
-        Me.Label13.TabIndex = 101
-        Me.Label13.Text = "Cancelar"
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(416, 272)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(0, 15)
+        Me.LblCancelar.TabIndex = 101
         '
-        'Label14
+        'LblEditar
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.Transparent
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(332, 272)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(39, 15)
-        Me.Label14.TabIndex = 102
-        Me.Label14.Text = "Editar"
+        Me.LblEditar.AutoSize = True
+        Me.LblEditar.BackColor = System.Drawing.Color.Transparent
+        Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEditar.Location = New System.Drawing.Point(332, 272)
+        Me.LblEditar.Name = "LblEditar"
+        Me.LblEditar.Size = New System.Drawing.Size(0, 15)
+        Me.LblEditar.TabIndex = 102
         '
-        'Label15
+        'LblGuardar
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.Transparent
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(234, 272)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(52, 15)
-        Me.Label15.TabIndex = 103
-        Me.Label15.Text = "Guardar"
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(234, 272)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
+        Me.LblGuardar.TabIndex = 103
         '
-        'Label19
+        'LblNuevo
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.Transparent
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(151, 272)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(42, 15)
-        Me.Label19.TabIndex = 104
-        Me.Label19.Text = "Nuevo"
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(151, 272)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
+        Me.LblNuevo.TabIndex = 104
         '
         'BtnCancelar
         '
@@ -257,12 +253,12 @@ Partial Class FrmNacionalidad
         Me.TabPage1.Controls.Add(Me.GrbNacionalidad)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.BtnCancelar)
-        Me.TabPage1.Controls.Add(Me.Label13)
-        Me.TabPage1.Controls.Add(Me.Label14)
+        Me.TabPage1.Controls.Add(Me.LblCancelar)
+        Me.TabPage1.Controls.Add(Me.LblEditar)
         Me.TabPage1.Controls.Add(Me.BtnNuevo)
-        Me.TabPage1.Controls.Add(Me.Label15)
+        Me.TabPage1.Controls.Add(Me.LblGuardar)
         Me.TabPage1.Controls.Add(Me.BtnGuardar)
-        Me.TabPage1.Controls.Add(Me.Label19)
+        Me.TabPage1.Controls.Add(Me.LblNuevo)
         Me.TabPage1.Controls.Add(Me.BtnEditar)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
@@ -338,10 +334,10 @@ Partial Class FrmNacionalidad
 
     End Sub
 
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label19 As Label
+    Friend WithEvents LblCancelar As Label
+    Friend WithEvents LblEditar As Label
+    Friend WithEvents LblGuardar As Label
+    Friend WithEvents LblNuevo As Label
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnGuardar As Button
