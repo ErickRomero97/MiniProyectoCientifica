@@ -128,6 +128,24 @@
     <Compile Include="Catalogos\FrmSocio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.vb">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSplash.Designer.vb">
+      <DependentUpon>FrmSplash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSplash.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Transacionales\FrmCuentaBancaria.Designer.vb">
       <DependentUpon>FrmCuentaBancaria.vb</DependentUpon>
     </Compile>
@@ -201,6 +219,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\FrmSocio.resx">
       <DependentUpon>FrmSocio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSplash.resx">
+      <DependentUpon>FrmSplash.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transacionales\FrmCuentaBancaria.resx">
       <DependentUpon>FrmCuentaBancaria.vb</DependentUpon>
