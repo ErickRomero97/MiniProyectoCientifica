@@ -24,8 +24,8 @@ Partial Class FrmBusquedaSocio
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmBusquedaSocio))
         Me.LsvMostrarSocio = New System.Windows.Forms.ListView()
-        Me.ChRtnsocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ChCodSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChCodigoSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChRTN = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNombre = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChApellido = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChDireccion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -43,23 +43,24 @@ Partial Class FrmBusquedaSocio
         '
         'LsvMostrarSocio
         '
-        Me.LsvMostrarSocio.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChRtnsocio, Me.ChCodSocio, Me.ChNombre, Me.ChApellido, Me.ChDireccion, Me.ChTelefono, Me.Chtelefonotrabajo, Me.ChLugar, Me.ChEmail, Me.ChSexo, Me.ChEstado, Me.ChNacionalidad, Me.ChProfecion})
+        Me.LsvMostrarSocio.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodigoSocio, Me.ChRTN, Me.ChNombre, Me.ChApellido, Me.ChDireccion, Me.ChTelefono, Me.Chtelefonotrabajo, Me.ChLugar, Me.ChEmail, Me.ChSexo, Me.ChEstado, Me.ChNacionalidad, Me.ChProfecion})
         Me.LsvMostrarSocio.FullRowSelect = True
         Me.LsvMostrarSocio.GridLines = True
         Me.LsvMostrarSocio.Location = New System.Drawing.Point(12, 164)
         Me.LsvMostrarSocio.Name = "LsvMostrarSocio"
-        Me.LsvMostrarSocio.Size = New System.Drawing.Size(698, 246)
+        Me.LsvMostrarSocio.Size = New System.Drawing.Size(912, 246)
         Me.LsvMostrarSocio.TabIndex = 97
         Me.LsvMostrarSocio.UseCompatibleStateImageBehavior = False
         Me.LsvMostrarSocio.View = System.Windows.Forms.View.Details
         '
-        'ChRtnsocio
+        'ChCodigoSocio
         '
-        Me.ChRtnsocio.Text = "RTNSocio"
+        Me.ChCodigoSocio.Text = "Código Socio"
+        Me.ChCodigoSocio.Width = 88
         '
-        'ChCodSocio
+        'ChRTN
         '
-        Me.ChCodSocio.Text = "CódigoSocio"
+        Me.ChRTN.Text = "RTN Socio"
         '
         'ChNombre
         '
@@ -137,7 +138,7 @@ Partial Class FrmBusquedaSocio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(725, 475)
+        Me.ClientSize = New System.Drawing.Size(936, 475)
         Me.Controls.Add(Me.LsvMostrarSocio)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtBuscar)
@@ -150,8 +151,8 @@ Partial Class FrmBusquedaSocio
     End Sub
 
     Friend WithEvents LsvMostrarSocio As ListView
-    Friend WithEvents ChRtnsocio As ColumnHeader
-    Friend WithEvents ChCodSocio As ColumnHeader
+    Friend WithEvents ChCodigoSocio As ColumnHeader
+    Friend WithEvents ChRTN As ColumnHeader
     Friend WithEvents ChNombre As ColumnHeader
     Friend WithEvents ChApellido As ColumnHeader
     Friend WithEvents ChDireccion As ColumnHeader

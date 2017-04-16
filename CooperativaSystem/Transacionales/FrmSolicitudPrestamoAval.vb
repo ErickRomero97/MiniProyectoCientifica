@@ -74,12 +74,15 @@ Public Class FrmSolicitudPrestamoAval
         Limpiar()
     End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-
         If Validar() Then
-            Agregar()
-            Limpiar()
-            HabilitarBotones(True, False, False, False, False)
-            Mostrar()
+            If FrmSolicitudPrestamo.TxtIdentidad.Text = CboSocio.Text Then
+                MessageBox.Show("El mismo solicitante no puede ser aval", "Cooperativa System", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Else
+                Agregar()
+                Limpiar()
+                HabilitarBotones(True, False, False, False, False)
+                Mostrar()
+            End If
         End If
     End Sub
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
@@ -231,7 +234,8 @@ Public Class FrmSolicitudPrestamoAval
                 With cmd
                     .CommandText = "SP_ExisteSolicitudAval"
                     .CommandType = CommandType.StoredProcedure
-                    .Parameters.Add("@NumSolicitudPrestamo", SqlDbType.NVarChar, 11).Value = CboSolicitudP.SelectedValue
+                    .Parameters.Add("@CodSocio", SqlDbType.NVarChar, 15).Value = CboSocio.SelectedValue
+                    .Parameters.Add("@NumPrestamo", SqlDbType.NVarChar, 11).Value = CboSolicitudP.SelectedValue
                     .Connection = cnn
                 End With
 

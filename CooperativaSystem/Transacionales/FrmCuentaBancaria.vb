@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmCuentaBancaria
     Private Sub FrmCuentaBancaria_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        HabilitarBotones(True, False, False, False, False)
+        Call HabilitarBotones(True, False, False, False, False)
         Call LlenarComboSocio()
         Call LlenarComboTipoCuenta()
         Call Limpiar()

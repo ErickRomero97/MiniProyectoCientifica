@@ -91,4 +91,15 @@ Public Class FrmBusquedaSocio
     Private Sub txtBuscar_TextChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
         BuscarSocio()
     End Sub
+
+    Private Sub LsvMostrarSocio_DoubleClick(sender As Object, e As EventArgs) Handles LsvMostrarSocio.DoubleClick
+        FrmSolicitudPrestamo.TxtIdentidad.Text = LsvMostrarSocio.FocusedItem.SubItems(0).Text
+        FrmSolicitudPrestamo.TxtNombre.Text = LsvMostrarSocio.FocusedItem.SubItems(2).Text
+        FrmSolicitudPrestamo.TxtRTN.Text = LsvMostrarSocio.FocusedItem.SubItems(1).Text
+        FrmSolicitudPrestamo.TxtNacionalidad.Text = LsvMostrarSocio.FocusedItem.SubItems(11).Text
+        FrmSolicitudPrestamo.TxtEstadoCivil.Text = LsvMostrarSocio.FocusedItem.SubItems(10).Text
+        FrmSolicitudPrestamo.TxtDireccion.Text = LsvMostrarSocio.FocusedItem.SubItems(4).Text
+
+        Me.Close()
+    End Sub
 End Class
