@@ -319,6 +319,8 @@ Partial Class FrmNacionalidad
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(721, 345)
         Me.Controls.Add(Me.TbCNacionalidad)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmNacionalidad"
         Me.Text = "FrmNacionalidad"
         Me.CmsOpciones.ResumeLayout(False)

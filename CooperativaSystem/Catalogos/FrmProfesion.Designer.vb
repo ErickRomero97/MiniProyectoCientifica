@@ -319,6 +319,8 @@ Partial Class FrmProfesion
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(650, 311)
         Me.Controls.Add(Me.TbcProfesion)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmProfesion"
         Me.Text = "FrmProfesion"
         Me.CmsOpciones.ResumeLayout(False)

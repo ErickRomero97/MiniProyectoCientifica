@@ -174,7 +174,10 @@ Partial Class FrmBusquedaCuentaBancaria
         Me.Controls.Add(Me.LsvCuentaBancaria)
         Me.Controls.Add(Me.BtnBuscar)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBusquedaCuentaBancaria"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "FrmBusquedaCuentaBancaria"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

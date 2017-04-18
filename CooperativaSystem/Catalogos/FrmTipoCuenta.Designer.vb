@@ -346,6 +346,8 @@ Partial Class FrmTipoCuenta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(769, 352)
         Me.Controls.Add(Me.TbcTipoCuenta)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmTipoCuenta"
         Me.Text = "FrmTipoCuenta"
         Me.CmsOpciones.ResumeLayout(False)

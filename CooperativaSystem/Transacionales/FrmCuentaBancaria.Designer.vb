@@ -367,6 +367,8 @@ Partial Class FrmCuentaBancaria
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(746, 354)
         Me.Controls.Add(Me.TbcCuentaBancaria)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmCuentaBancaria"
         Me.Text = "FrmCuentaBancaria"
         Me.CmsOpciones.ResumeLayout(False)

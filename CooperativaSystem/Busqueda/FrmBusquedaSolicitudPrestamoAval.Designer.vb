@@ -26,6 +26,7 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.LsvSolicitudPA = New System.Windows.Forms.ListView()
         Me.ChCodSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChNombreSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ChApellidoSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ChCodigoSolicitud = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.BtnBuscar = New System.Windows.Forms.Button()
         Me.TxtBuscar = New System.Windows.Forms.TextBox()
@@ -34,7 +35,6 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RdoCodSocio = New System.Windows.Forms.RadioButton()
         Me.RdoCodSolicitudAval = New System.Windows.Forms.RadioButton()
-        Me.ChApellidoSocio = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -60,6 +60,11 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         '
         Me.ChNombreSocio.Text = "Nombre del Socio"
         Me.ChNombreSocio.Width = 146
+        '
+        'ChApellidoSocio
+        '
+        Me.ChApellidoSocio.Text = "Apellido del Socio"
+        Me.ChApellidoSocio.Width = 177
         '
         'ChCodigoSolicitud
         '
@@ -143,11 +148,6 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.RdoCodSolicitudAval.Text = "Codigo de la Solicitud de Prestamo"
         Me.RdoCodSolicitudAval.UseVisualStyleBackColor = True
         '
-        'ChApellidoSocio
-        '
-        Me.ChApellidoSocio.Text = "Apellido del Socio"
-        Me.ChApellidoSocio.Width = 177
-        '
         'FrmBusquedaSolicitudPrestamoAval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -161,6 +161,8 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.Controls.Add(Me.LsvSolicitudPA)
         Me.Controls.Add(Me.BtnBuscar)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBusquedaSolicitudPrestamoAval"
         Me.Text = "FrmBusquedaSolicitudPrestamoAval"
         Me.Panel2.ResumeLayout(False)

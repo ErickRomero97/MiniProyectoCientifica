@@ -158,6 +158,8 @@ Partial Class FrmBuscarUsuario
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.GroupBox1)
         Me.DoubleBuffered = True
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBuscarUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Busqueda Usuario"

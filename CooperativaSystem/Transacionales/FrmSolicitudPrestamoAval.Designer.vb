@@ -313,6 +313,8 @@ Partial Class FrmSolicitudPrestamoAval
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(692, 333)
         Me.Controls.Add(Me.TbcSolicitudPA)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSolicitudPrestamoAval"
         Me.Text = "FrmSolicitudPrestamoAval"
         Me.CmsOpciones.ResumeLayout(False)

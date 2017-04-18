@@ -596,6 +596,8 @@ Partial Class FrmSocio
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(733, 580)
         Me.Controls.Add(Me.TbcSocio)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSocio"
         Me.Text = "FrmSocio"
         Me.TbcSocio.ResumeLayout(False)

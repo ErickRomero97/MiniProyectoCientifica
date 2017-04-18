@@ -319,6 +319,8 @@ Partial Class FrmTipoPrestamo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(675, 320)
         Me.Controls.Add(Me.TbcTipoPrestamo)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmTipoPrestamo"
         Me.Text = "Tipo Prestamo"
         Me.CmsOpciones.ResumeLayout(False)
