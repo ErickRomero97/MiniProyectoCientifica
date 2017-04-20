@@ -75,9 +75,7 @@ Public Class FrmSolicitudPrestamoAval
     End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         If Validar() Then
-            If FrmSolicitudPrestamo.TxtIdentidad.Text = CboSocio.Text Then
-                MessageBox.Show("El mismo solicitante no puede ser aval", "Cooperativa System", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Else
+            If ExisteSocioAval() = False Then
                 Agregar()
                 Limpiar()
                 HabilitarBotones(True, False, False, False, False)
@@ -167,6 +165,37 @@ Public Class FrmSolicitudPrestamoAval
             End Using
         End If
     End Sub
+
+    Private Function ExisteSocioAval() As Boolean
+        If cnn.State = ConnectionState.Open Then
+            cnn.Close()
+        End If
+        Dim Val As Boolean = False
+        cnn.Open()
+        Using cmd As New SqlCommand
+            Try
+                With cmd
+                    .CommandText = "Sp_VerificarSocioAval"
+                    .CommandType = CommandType.StoredProcedure
+                    .Parameters.Add("@NumSolicitudPrestamo", SqlDbType.NVarChar, 11).Value = CboSolicitudP.SelectedValue
+                    .Parameters.Add("@CodSocio", SqlDbType.NVarChar, 15).Value = CboSocio.SelectedValue
+                    .Connection = cnn
+                End With
+
+                Dim existe As Integer = cmd.ExecuteScalar()
+
+                If existe = 0 Then
+                Else
+                    Val = True
+                    MessageBox.Show("El mismo solicitante no puede ser aval.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                End If
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+
+        End Using
+        Return Val
+    End Function
 
     Private Sub Actualizar()
         If cnn.State = ConnectionState.Open Then

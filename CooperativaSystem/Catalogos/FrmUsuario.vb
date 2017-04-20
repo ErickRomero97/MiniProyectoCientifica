@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Drawing.Imaging
 Public Class FrmUsuario
     Private Sub FrmUsuario_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call HabilitarBotones(True, False, False, False, False)
@@ -6,6 +8,19 @@ Public Class FrmUsuario
         Call LlenarComboTipoUsuario()
         Call MostrarUsuario()
     End Sub
+
+    Private Function ImageToByte(ByVal img As Image) As Byte()
+        Dim ms As MemoryStream = New MemoryStream()
+
+        img.Save(ms, Imaging.ImageFormat.Png)
+
+        ms.Close()
+        Dim byteArray As Byte() = ms.ToArray()
+        ms.Dispose()
+
+        Return byteArray
+
+    End Function
 
     Sub HabilitarBotones(ByVal Nuevo As Boolean, ByVal Guardar As Boolean, ByVal Editar As Boolean, ByVal Cancelar As Boolean, ByVal Groupbox As Boolean)
         BtnNuevo.Enabled = Nuevo
@@ -21,6 +36,7 @@ Public Class FrmUsuario
         CboEstado.Text = Nothing
         MtbCodigoOficial.Text = Nothing
         CboTipoUsuario.Text = Nothing
+        FotoAgregar.Image = Image.FromFile("../../Resources/silueta.png")
     End Sub
 
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
@@ -123,6 +139,13 @@ Public Class FrmUsuario
     End Sub
 
     Private Sub AgregarUsuario()
+        Dim foto As Byte()
+
+        If FotoAgregar.Image Is Nothing Then
+            foto = Nothing
+        Else
+            foto = ImageToByte(FotoAgregar.Image)
+        End If
         If cnn.State = ConnectionState.Open Then
             cnn.Close()
         End If
@@ -138,6 +161,11 @@ Public Class FrmUsuario
                     .Parameters.Add("@IdEstado", SqlDbType.Int).Value = Trim(CboEstado.SelectedValue)
                     .Parameters.Add("@CodOficial", SqlDbType.NVarChar, 15).Value = Trim(MtbCodigoOficial.Text)
                     .Parameters.Add("@IdTipoUsuario", SqlDbType.Int).Value = Trim(CboTipoUsuario.SelectedValue)
+                    If foto Is Nothing Then
+                        .Parameters.Add("@Foto", SqlDbType.Image).Value = DBNull.Value
+                    Else
+                        .Parameters.Add("@Foto", SqlDbType.Image).Value = foto
+                    End If
                     .ExecuteNonQuery()
                     MessageBox.Show("El usuario ha sido registrado con éxito", "Cooperativa System", MessageBoxButtons.OK)
                     Call MostrarUsuario()
@@ -151,6 +179,13 @@ Public Class FrmUsuario
     End Sub
 
     Private Sub ActualizarUsuario()
+        Dim foto As Byte()
+
+        If FotoAgregar.Image Is Nothing Then
+            foto = Nothing
+        Else
+            foto = ImageToByte(FotoAgregar.Image)
+        End If
         If cnn.State = ConnectionState.Open Then
             cnn.Close()
         End If
@@ -167,6 +202,11 @@ Public Class FrmUsuario
                     .Parameters.Add("@IdEstado", SqlDbType.Int).Value = Trim(CboEstado.SelectedValue)
                     .Parameters.Add("@CodOficial", SqlDbType.NVarChar, 15).Value = Trim(MtbCodigoOficial.Text)
                     .Parameters.Add("@IdTipoUsuario", SqlDbType.Int).Value = Trim(CboTipoUsuario.SelectedValue)
+                    If foto Is Nothing Then
+                        .Parameters.Add("@Foto", SqlDbType.Image).Value = DBNull.Value
+                    Else
+                        .Parameters.Add("@Foto", SqlDbType.Image).Value = foto
+                    End If
                     .ExecuteNonQuery()
                     MessageBox.Show("El usuario ha sido actualizado con éxito", "Cooperativa System", MessageBoxButtons.OK)
                     Call MostrarUsuario()
@@ -202,6 +242,7 @@ Public Class FrmUsuario
                         .SubItems.Add(Ver("Estado").ToString)
                         .SubItems.Add(Ver("CodOficial").ToString)
                         .SubItems.Add(Ver("Usuario").ToString)
+                        .SubItems.Add(Ver("Foto").ToString)
                     End With
                 End While
             Catch ex As Exception
@@ -229,6 +270,7 @@ Public Class FrmUsuario
         CboEstado.Text = LsvMostrarUsuario.FocusedItem.SubItems(3).Text
         MtbCodigoOficial.Text = LsvMostrarUsuario.FocusedItem.SubItems(4).Text
         CboTipoUsuario.Text = LsvMostrarUsuario.FocusedItem.SubItems(5).Text
+        MostrarImagen()
         TbcUsuario.SelectedIndex = 0
         HabilitarBotones(False, False, True, True, True)
     End Sub
@@ -272,7 +314,7 @@ Public Class FrmUsuario
         Return estado
     End Function
 
-    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs)
         FrmBuscarOficial.ShowDialog()
     End Sub
     Private Sub BtnNuevo_MouseLeave(sender As Object, e As EventArgs) Handles BtnNuevo.MouseLeave
@@ -309,5 +351,37 @@ Public Class FrmUsuario
 
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Me.Close()
+    End Sub
+
+    Private Sub MostrarImagen()
+        Dim connection As New SqlConnection("Data Source=NIXONSANCHEZ;Initial Catalog=CooperativaSystem;Integrated Security=True")
+        Dim command As New SqlCommand("SELECT Foto FROM Usuario where IdUsuario = @var", connection)
+        command.Parameters.Add("@var", SqlDbType.VarChar).Value = LsvMostrarUsuario.FocusedItem.SubItems(0).Text
+
+        Dim table As New DataTable()
+        Dim adapter As New SqlDataAdapter(command)
+        adapter.Fill(table)
+
+        Dim img() As Byte
+        img = table.Rows(0)(0)
+        Dim ms As New MemoryStream(img)
+        FotoAgregar.Image = Image.FromStream(ms)
+    End Sub
+
+    Private Sub btnAbrir_Click(sender As Object, e As EventArgs) Handles btnAbrir.Click
+        AbrirFoto.InitialDirectory = My.Computer.FileSystem.SpecialDirectories.MyPictures
+        AbrirFoto.Filter = "Imágenes (*.png, *.jpg)|*.png;*.jpg"
+        AbrirFoto.FileName = "Seleccionar Imagen"
+        If AbrirFoto.ShowDialog = DialogResult.OK Then
+            FotoAgregar.Image = Image.FromFile(AbrirFoto.FileName)
+        End If
+    End Sub
+
+    Private Sub btnEliminarFoto_Click(sender As Object, e As EventArgs) Handles btnEliminarFoto.Click
+        FotoAgregar.Image = Image.FromFile("../../Resources/silueta.png")
+    End Sub
+
+    Private Sub BtnBuscar_Click_1(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        FrmBuscarOficial.ShowDialog()
     End Sub
 End Class
