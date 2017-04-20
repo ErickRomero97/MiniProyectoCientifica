@@ -35,5 +35,13 @@ Public Class FrmLogin
         Me.Close()
     End Sub
 
+    Private Sub TxtUser_Click(sender As Object, e As EventArgs) Handles TxtUser.Click
+        TxtUser.Text = ""
+    End Sub
 
+
+    Private Sub TxtPassword_Click(sender As Object, e As EventArgs) Handles TxtPassword.Click
+        TxtPassword.Text = ""
+        TxtPassword.PasswordChar = "*"
+    End Sub
 End Class

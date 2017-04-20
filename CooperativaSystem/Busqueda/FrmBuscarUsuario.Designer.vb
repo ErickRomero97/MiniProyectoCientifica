@@ -36,6 +36,8 @@ Partial Class FrmBuscarUsuario
         Me.RdbCodigoOficial = New System.Windows.Forms.RadioButton()
         Me.RdbNombreUsuario = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -102,6 +104,7 @@ Partial Class FrmBuscarUsuario
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.RdbCodigoOficial)
         Me.GroupBox1.Controls.Add(Me.RdbNombreUsuario)
         Me.GroupBox1.Location = New System.Drawing.Point(123, 147)
@@ -145,6 +148,32 @@ Partial Class FrmBuscarUsuario
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Busqueda Usuario"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(568, 77)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 16)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(574, 30)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 16
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
         'FrmBuscarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -152,13 +181,15 @@ Partial Class FrmBuscarUsuario
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(649, 583)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.LsvMostrarUsuario)
         Me.Controls.Add(Me.BtnBuscar)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.GroupBox1)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBuscarUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -183,4 +214,6 @@ Partial Class FrmBuscarUsuario
     Friend WithEvents RdbCodigoOficial As RadioButton
     Friend WithEvents RdbNombreUsuario As RadioButton
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

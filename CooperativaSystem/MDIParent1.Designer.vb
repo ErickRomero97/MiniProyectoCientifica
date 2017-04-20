@@ -77,8 +77,9 @@ Partial Class MDIP
         '
         Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarOficialToolStripMenuItem, Me.BuscarUsuarioToolStripMenuItem, Me.BusquedaCuentaBancariaToolStripMenuItem, Me.BusquedaSocioToolStripMenuItem, Me.BusquedaSolicitudPrestamoAvalToolStripMenuItem})
         Me.ToolStripMenuItem1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ToolStripMenuItem1.Image = CType(resources.GetObject("ToolStripMenuItem1.Image"), System.Drawing.Image)
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(84, 21)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(100, 21)
         Me.ToolStripMenuItem1.Text = "&Busqueda"
         '
         'BuscarOficialToolStripMenuItem
@@ -126,8 +127,9 @@ Partial Class MDIP
         'ToolStripMenuItem2
         '
         Me.ToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NacionalidadToolStripMenuItem, Me.OficialToolStripMenuItem, Me.ProfeciónToolStripMenuItem, Me.SocioToolStripMenuItem, Me.TipoCuentaToolStripMenuItem, Me.TipoPrestamoToolStripMenuItem, Me.UsuarioToolStripMenuItem})
+        Me.ToolStripMenuItem2.Image = CType(resources.GetObject("ToolStripMenuItem2.Image"), System.Drawing.Image)
         Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(78, 21)
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(94, 21)
         Me.ToolStripMenuItem2.Text = "&Catálogo"
         '
         'NacionalidadToolStripMenuItem
@@ -189,8 +191,9 @@ Partial Class MDIP
         'ToolStripMenuItem3
         '
         Me.ToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CuentaBancariaToolStripMenuItem, Me.SolicitudPrestamoToolStripMenuItem, Me.SolicitudPrestamoAvalToolStripMenuItem})
+        Me.ToolStripMenuItem3.Image = CType(resources.GetObject("ToolStripMenuItem3.Image"), System.Drawing.Image)
         Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(127, 21)
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(143, 21)
         Me.ToolStripMenuItem3.Text = "&Transaccionales"
         '
         'CuentaBancariaToolStripMenuItem
@@ -216,8 +219,9 @@ Partial Class MDIP
         '
         'SalirToolStripMenuItem
         '
+        Me.SalirToolStripMenuItem.Image = CType(resources.GetObject("SalirToolStripMenuItem.Image"), System.Drawing.Image)
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(48, 21)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(64, 21)
         Me.SalirToolStripMenuItem.Text = "salir"
         '
         'StatusStrip1
@@ -272,7 +276,7 @@ Partial Class MDIP
         '
         Me.Panel3.BackColor = System.Drawing.Color.Transparent
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel3.Location = New System.Drawing.Point(-9, 340)
+        Me.Panel3.Location = New System.Drawing.Point(3, 320)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(261, 283)
         Me.Panel3.TabIndex = 25
@@ -293,9 +297,9 @@ Partial Class MDIP
         Me.PBLogoPequeño.BackColor = System.Drawing.Color.Transparent
         Me.PBLogoPequeño.BackgroundImage = CType(resources.GetObject("PBLogoPequeño.BackgroundImage"), System.Drawing.Image)
         Me.PBLogoPequeño.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PBLogoPequeño.Location = New System.Drawing.Point(-9, 300)
+        Me.PBLogoPequeño.Location = New System.Drawing.Point(3, 320)
         Me.PBLogoPequeño.Name = "PBLogoPequeño"
-        Me.PBLogoPequeño.Size = New System.Drawing.Size(261, 270)
+        Me.PBLogoPequeño.Size = New System.Drawing.Size(249, 250)
         Me.PBLogoPequeño.TabIndex = 24
         Me.PBLogoPequeño.TabStop = False
         '

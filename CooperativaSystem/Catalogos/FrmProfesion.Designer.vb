@@ -44,6 +44,8 @@ Partial Class FrmProfesion
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TbcProfesion = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.GrbProfesion = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -240,16 +242,18 @@ Partial Class FrmProfesion
         '
         Me.TbcProfesion.Controls.Add(Me.TabPage1)
         Me.TbcProfesion.Controls.Add(Me.TabPage2)
-        Me.TbcProfesion.Location = New System.Drawing.Point(0, 12)
+        Me.TbcProfesion.Location = New System.Drawing.Point(-4, 12)
         Me.TbcProfesion.Name = "TbcProfesion"
         Me.TbcProfesion.SelectedIndex = 0
-        Me.TbcProfesion.Size = New System.Drawing.Size(655, 300)
+        Me.TbcProfesion.Size = New System.Drawing.Size(659, 300)
         Me.TbcProfesion.TabIndex = 117
         '
         'TabPage1
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.GrbProfesion)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.BtnCancelar)
@@ -263,10 +267,36 @@ Partial Class FrmProfesion
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(647, 274)
+        Me.TabPage1.Size = New System.Drawing.Size(651, 274)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Profesión "
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(561, 64)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 16)
+        Me.Label2.TabIndex = 131
+        Me.Label2.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(567, 17)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 130
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'GrbProfesion
         '
@@ -286,9 +316,9 @@ Partial Class FrmProfesion
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Location = New System.Drawing.Point(8, 1)
+        Me.Panel2.Location = New System.Drawing.Point(-2, 1)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(597, 75)
+        Me.Panel2.Size = New System.Drawing.Size(504, 79)
         Me.Panel2.TabIndex = 128
         '
         'Label4
@@ -304,11 +334,13 @@ Partial Class FrmProfesion
         '
         'TabPage2
         '
+        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage2.Controls.Add(Me.LsvProfesion)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(647, 274)
+        Me.TabPage2.Size = New System.Drawing.Size(651, 274)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Profesión"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -317,9 +349,9 @@ Partial Class FrmProfesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(650, 311)
+        Me.ClientSize = New System.Drawing.Size(645, 300)
         Me.Controls.Add(Me.TbcProfesion)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmProfesion"
         Me.Text = "FrmProfesion"
@@ -360,4 +392,6 @@ Partial Class FrmProfesion
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents GrbProfesion As GroupBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

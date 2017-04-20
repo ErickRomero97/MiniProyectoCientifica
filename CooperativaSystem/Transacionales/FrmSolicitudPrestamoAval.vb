@@ -312,4 +312,9 @@ Public Class FrmSolicitudPrestamoAval
     Private Sub BtnCancelar_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnCancelar.MouseMove
         LblCancelar.Text = "Cancelar"
     End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Close()
+
+    End Sub
 End Class

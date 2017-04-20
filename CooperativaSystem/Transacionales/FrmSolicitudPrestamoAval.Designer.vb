@@ -48,6 +48,8 @@ Partial Class FrmSolicitudPrestamoAval
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GrbSolicitud = New System.Windows.Forms.GroupBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.CmsOpciones.SuspendLayout()
         Me.TbcSolicitudPA.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -198,9 +200,9 @@ Partial Class FrmSolicitudPrestamoAval
         Me.LsvSolicitudAval.ContextMenuStrip = Me.CmsOpciones
         Me.LsvSolicitudAval.FullRowSelect = True
         Me.LsvSolicitudAval.GridLines = True
-        Me.LsvSolicitudAval.Location = New System.Drawing.Point(0, 6)
+        Me.LsvSolicitudAval.Location = New System.Drawing.Point(0, 0)
         Me.LsvSolicitudAval.Name = "LsvSolicitudAval"
-        Me.LsvSolicitudAval.Size = New System.Drawing.Size(666, 310)
+        Me.LsvSolicitudAval.Size = New System.Drawing.Size(684, 302)
         Me.LsvSolicitudAval.TabIndex = 116
         Me.LsvSolicitudAval.UseCompatibleStateImageBehavior = False
         Me.LsvSolicitudAval.View = System.Windows.Forms.View.Details
@@ -245,17 +247,19 @@ Partial Class FrmSolicitudPrestamoAval
         '
         Me.TbcSolicitudPA.Controls.Add(Me.TabPage1)
         Me.TbcSolicitudPA.Controls.Add(Me.TabPage2)
-        Me.TbcSolicitudPA.Location = New System.Drawing.Point(2, 2)
+        Me.TbcSolicitudPA.Location = New System.Drawing.Point(-4, 0)
         Me.TbcSolicitudPA.Name = "TbcSolicitudPA"
         Me.TbcSolicitudPA.SelectedIndex = 0
-        Me.TbcSolicitudPA.Size = New System.Drawing.Size(683, 334)
+        Me.TbcSolicitudPA.Size = New System.Drawing.Size(692, 334)
         Me.TbcSolicitudPA.TabIndex = 127
         '
         'TabPage1
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.Label4)
+        Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.GrbSolicitud)
         Me.TabPage1.Controls.Add(Me.BtnEditar)
         Me.TabPage1.Controls.Add(Me.LblCancelar)
@@ -268,7 +272,7 @@ Partial Class FrmSolicitudPrestamoAval
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(675, 308)
+        Me.TabPage1.Size = New System.Drawing.Size(684, 308)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Solicitud Prestamo Aval"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -302,18 +306,44 @@ Partial Class FrmSolicitudPrestamoAval
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(675, 308)
+        Me.TabPage2.Size = New System.Drawing.Size(684, 308)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Solicitud Prestamo Aval"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(617, 57)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(49, 16)
+        Me.Label17.TabIndex = 139
+        Me.Label17.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(619, 10)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 138
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'FrmSolicitudPrestamoAval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(692, 333)
+        Me.ClientSize = New System.Drawing.Size(683, 324)
         Me.Controls.Add(Me.TbcSolicitudPA)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSolicitudPrestamoAval"
         Me.Text = "FrmSolicitudPrestamoAval"
@@ -352,4 +382,6 @@ Partial Class FrmSolicitudPrestamoAval
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents GrbSolicitud As GroupBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label17 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

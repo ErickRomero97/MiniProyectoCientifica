@@ -48,6 +48,8 @@ Partial Class FrmTipoPrestamo
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.CmsOpciones.SuspendLayout()
         Me.TbcTipoPrestamo.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -219,9 +221,9 @@ Partial Class FrmTipoPrestamo
         Me.LsvtipoPrestamo.ContextMenuStrip = Me.CmsOpciones
         Me.LsvtipoPrestamo.FullRowSelect = True
         Me.LsvtipoPrestamo.GridLines = True
-        Me.LsvtipoPrestamo.Location = New System.Drawing.Point(6, 3)
+        Me.LsvtipoPrestamo.Location = New System.Drawing.Point(8, 8)
         Me.LsvtipoPrestamo.Name = "LsvtipoPrestamo"
-        Me.LsvtipoPrestamo.Size = New System.Drawing.Size(689, 266)
+        Me.LsvtipoPrestamo.Size = New System.Drawing.Size(660, 266)
         Me.LsvtipoPrestamo.TabIndex = 105
         Me.LsvtipoPrestamo.UseCompatibleStateImageBehavior = False
         Me.LsvtipoPrestamo.View = System.Windows.Forms.View.Details
@@ -240,16 +242,18 @@ Partial Class FrmTipoPrestamo
         '
         Me.TbcTipoPrestamo.Controls.Add(Me.TabPage1)
         Me.TbcTipoPrestamo.Controls.Add(Me.TabPage2)
-        Me.TbcTipoPrestamo.Location = New System.Drawing.Point(0, -1)
+        Me.TbcTipoPrestamo.Location = New System.Drawing.Point(-4, -1)
         Me.TbcTipoPrestamo.Name = "TbcTipoPrestamo"
         Me.TbcTipoPrestamo.SelectedIndex = 0
-        Me.TbcTipoPrestamo.Size = New System.Drawing.Size(682, 325)
+        Me.TbcTipoPrestamo.Size = New System.Drawing.Size(688, 325)
         Me.TbcTipoPrestamo.TabIndex = 106
         '
         'TabPage1
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.GrbTipoPrestamo)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.BtnEditar)
@@ -263,7 +267,7 @@ Partial Class FrmTipoPrestamo
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(674, 299)
+        Me.TabPage1.Size = New System.Drawing.Size(680, 299)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Tipo Prestamo"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -286,9 +290,9 @@ Partial Class FrmTipoPrestamo
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Location = New System.Drawing.Point(40, 16)
+        Me.Panel2.Location = New System.Drawing.Point(0, 17)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(597, 78)
+        Me.Panel2.Size = New System.Drawing.Size(548, 78)
         Me.Panel2.TabIndex = 128
         '
         'Label4
@@ -304,14 +308,42 @@ Partial Class FrmTipoPrestamo
         '
         'TabPage2
         '
+        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage2.Controls.Add(Me.LsvtipoPrestamo)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(674, 299)
+        Me.TabPage2.Size = New System.Drawing.Size(680, 299)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Tipo Prestamo"
         Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(590, 75)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 16)
+        Me.Label3.TabIndex = 133
+        Me.Label3.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(596, 28)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 132
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'FrmTipoPrestamo
         '
@@ -319,7 +351,7 @@ Partial Class FrmTipoPrestamo
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(675, 320)
         Me.Controls.Add(Me.TbcTipoPrestamo)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmTipoPrestamo"
         Me.Text = "Tipo Prestamo"
@@ -360,4 +392,6 @@ Partial Class FrmTipoPrestamo
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents GrbTipoPrestamo As GroupBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

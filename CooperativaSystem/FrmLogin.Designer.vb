@@ -35,7 +35,7 @@ Partial Class FrmLogin
         'BtnSalir
         '
         Me.BtnSalir.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnSalir.Location = New System.Drawing.Point(336, 127)
+        Me.BtnSalir.Location = New System.Drawing.Point(426, 156)
         Me.BtnSalir.Name = "BtnSalir"
         Me.BtnSalir.Size = New System.Drawing.Size(75, 23)
         Me.BtnSalir.TabIndex = 8
@@ -45,7 +45,7 @@ Partial Class FrmLogin
         'BtnIngresar
         '
         Me.BtnIngresar.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BtnIngresar.Location = New System.Drawing.Point(336, 88)
+        Me.BtnIngresar.Location = New System.Drawing.Point(426, 101)
         Me.BtnIngresar.Name = "BtnIngresar"
         Me.BtnIngresar.Size = New System.Drawing.Size(75, 23)
         Me.BtnIngresar.TabIndex = 7
@@ -56,33 +56,35 @@ Partial Class FrmLogin
         '
         Me.TxtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtPassword.ForeColor = System.Drawing.Color.Black
-        Me.TxtPassword.Location = New System.Drawing.Point(101, 147)
+        Me.TxtPassword.Location = New System.Drawing.Point(134, 168)
         Me.TxtPassword.Multiline = True
         Me.TxtPassword.Name = "TxtPassword"
-        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TxtPassword.Size = New System.Drawing.Size(173, 27)
+        Me.TxtPassword.Size = New System.Drawing.Size(209, 25)
         Me.TxtPassword.TabIndex = 6
+        Me.TxtPassword.Text = "Password"
         '
         'TxtUser
         '
-        Me.TxtUser.BackColor = System.Drawing.SystemColors.Window
+        Me.TxtUser.BackColor = System.Drawing.SystemColors.InactiveBorder
+        Me.TxtUser.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TxtUser.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtUser.ForeColor = System.Drawing.Color.Black
-        Me.TxtUser.Location = New System.Drawing.Point(101, 86)
+        Me.TxtUser.Location = New System.Drawing.Point(137, 82)
         Me.TxtUser.Multiline = True
         Me.TxtUser.Name = "TxtUser"
-        Me.TxtUser.Size = New System.Drawing.Size(173, 27)
+        Me.TxtUser.Size = New System.Drawing.Size(209, 25)
         Me.TxtUser.TabIndex = 5
         Me.TxtUser.Tag = ""
+        Me.TxtUser.Text = "UserName"
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel1.Location = New System.Drawing.Point(32, 72)
+        Me.Panel1.Location = New System.Drawing.Point(52, 67)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(54, 50)
+        Me.Panel1.Size = New System.Drawing.Size(66, 56)
         Me.Panel1.TabIndex = 9
         '
         'Panel2
@@ -90,9 +92,9 @@ Partial Class FrmLogin
         Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Panel2.Location = New System.Drawing.Point(35, 137)
+        Me.Panel2.Location = New System.Drawing.Point(52, 147)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(47, 46)
+        Me.Panel2.Size = New System.Drawing.Size(62, 59)
         Me.Panel2.TabIndex = 10
         '
         'Label1
@@ -113,7 +115,7 @@ Partial Class FrmLogin
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(513, 243)
+        Me.ClientSize = New System.Drawing.Size(556, 293)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -122,7 +124,7 @@ Partial Class FrmLogin
         Me.Controls.Add(Me.TxtPassword)
         Me.Controls.Add(Me.TxtUser)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False

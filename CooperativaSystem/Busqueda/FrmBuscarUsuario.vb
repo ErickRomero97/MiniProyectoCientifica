@@ -124,4 +124,8 @@ Public Class FrmBuscarUsuario
     Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
         Call MostrarUsuario()
     End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Close()
+    End Sub
 End Class

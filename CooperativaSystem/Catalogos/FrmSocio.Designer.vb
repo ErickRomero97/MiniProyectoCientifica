@@ -26,6 +26,8 @@ Partial Class FrmSocio
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSocio))
         Me.TbcSocio = New System.Windows.Forms.TabControl()
         Me.TPGestionSocio = New System.Windows.Forms.TabPage()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.BtnEditar = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -90,16 +92,18 @@ Partial Class FrmSocio
         '
         Me.TbcSocio.Controls.Add(Me.TPGestionSocio)
         Me.TbcSocio.Controls.Add(Me.TPListarSocio)
-        Me.TbcSocio.Location = New System.Drawing.Point(5, 11)
+        Me.TbcSocio.Location = New System.Drawing.Point(-4, 11)
         Me.TbcSocio.Name = "TbcSocio"
         Me.TbcSocio.SelectedIndex = 0
-        Me.TbcSocio.Size = New System.Drawing.Size(722, 566)
+        Me.TbcSocio.Size = New System.Drawing.Size(730, 573)
         Me.TbcSocio.TabIndex = 88
         '
         'TPGestionSocio
         '
         Me.TPGestionSocio.BackgroundImage = CType(resources.GetObject("TPGestionSocio.BackgroundImage"), System.Drawing.Image)
         Me.TPGestionSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TPGestionSocio.Controls.Add(Me.Label8)
+        Me.TPGestionSocio.Controls.Add(Me.BtnCerrar)
         Me.TPGestionSocio.Controls.Add(Me.BtnEditar)
         Me.TPGestionSocio.Controls.Add(Me.Label12)
         Me.TPGestionSocio.Controls.Add(Me.BtnNuevo)
@@ -113,10 +117,36 @@ Partial Class FrmSocio
         Me.TPGestionSocio.Location = New System.Drawing.Point(4, 22)
         Me.TPGestionSocio.Name = "TPGestionSocio"
         Me.TPGestionSocio.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPGestionSocio.Size = New System.Drawing.Size(714, 540)
+        Me.TPGestionSocio.Size = New System.Drawing.Size(722, 547)
         Me.TPGestionSocio.TabIndex = 0
         Me.TPGestionSocio.Text = "Gestión Socio"
         Me.TPGestionSocio.UseVisualStyleBackColor = True
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(629, 62)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(49, 16)
+        Me.Label8.TabIndex = 125
+        Me.Label8.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(635, 15)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 124
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'BtnEditar
         '
@@ -496,12 +526,13 @@ Partial Class FrmSocio
         '
         'TPListarSocio
         '
+        Me.TPListarSocio.BackgroundImage = CType(resources.GetObject("TPListarSocio.BackgroundImage"), System.Drawing.Image)
         Me.TPListarSocio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TPListarSocio.Controls.Add(Me.LsvMostrarSocio)
         Me.TPListarSocio.Location = New System.Drawing.Point(4, 22)
         Me.TPListarSocio.Name = "TPListarSocio"
         Me.TPListarSocio.Padding = New System.Windows.Forms.Padding(3)
-        Me.TPListarSocio.Size = New System.Drawing.Size(714, 540)
+        Me.TPListarSocio.Size = New System.Drawing.Size(722, 547)
         Me.TPListarSocio.TabIndex = 1
         Me.TPListarSocio.Text = "Listar Socio"
         Me.TPListarSocio.UseVisualStyleBackColor = True
@@ -514,7 +545,7 @@ Partial Class FrmSocio
         Me.LsvMostrarSocio.GridLines = True
         Me.LsvMostrarSocio.Location = New System.Drawing.Point(-3, 0)
         Me.LsvMostrarSocio.Name = "LsvMostrarSocio"
-        Me.LsvMostrarSocio.Size = New System.Drawing.Size(714, 534)
+        Me.LsvMostrarSocio.Size = New System.Drawing.Size(722, 534)
         Me.LsvMostrarSocio.TabIndex = 90
         Me.LsvMostrarSocio.UseCompatibleStateImageBehavior = False
         Me.LsvMostrarSocio.View = System.Windows.Forms.View.Details
@@ -594,9 +625,9 @@ Partial Class FrmSocio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(733, 580)
+        Me.ClientSize = New System.Drawing.Size(719, 574)
         Me.Controls.Add(Me.TbcSocio)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSocio"
         Me.Text = "FrmSocio"
@@ -666,4 +697,6 @@ Partial Class FrmSocio
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label12 As Label
     Friend WithEvents BtnEditar As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

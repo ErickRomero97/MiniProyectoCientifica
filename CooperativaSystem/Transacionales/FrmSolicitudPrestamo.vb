@@ -365,4 +365,9 @@ Public Class FrmSolicitudPrestamo
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         Call ActualizarPrestamo()
     End Sub
+
+    Private Sub BtnCerrar_Click_1(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Close()
+    End Sub
+
 End Class

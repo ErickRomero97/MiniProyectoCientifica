@@ -59,6 +59,8 @@ Partial Class FrmUsuario
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.CmsOpciones.SuspendLayout()
         Me.TbcUsuario.SuspendLayout()
         Me.TbpGestion.SuspendLayout()
@@ -92,6 +94,8 @@ Partial Class FrmUsuario
         '
         Me.TbpGestion.BackgroundImage = CType(resources.GetObject("TbpGestion.BackgroundImage"), System.Drawing.Image)
         Me.TbpGestion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TbpGestion.Controls.Add(Me.Label3)
+        Me.TbpGestion.Controls.Add(Me.BtnCerrar)
         Me.TbpGestion.Controls.Add(Me.Label4)
         Me.TbpGestion.Controls.Add(Me.BtnGuardar)
         Me.TbpGestion.Controls.Add(Me.BtnNuevo)
@@ -425,13 +429,39 @@ Partial Class FrmUsuario
         Me.ColumnHeader6.Text = "Tipo Usuario"
         Me.ColumnHeader6.Width = 111
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(441, 69)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 16)
+        Me.Label3.TabIndex = 145
+        Me.Label3.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(447, 22)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 144
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
         'FrmUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(521, 472)
         Me.Controls.Add(Me.TbcUsuario)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmUsuario"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -481,4 +511,6 @@ Partial Class FrmUsuario
     Friend WithEvents BtnEditar As Button
     Friend WithEvents BtnCancelar As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

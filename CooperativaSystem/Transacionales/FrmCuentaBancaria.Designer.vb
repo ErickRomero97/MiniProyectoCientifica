@@ -51,6 +51,8 @@ Partial Class FrmCuentaBancaria
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TbcCuentaBancaria = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.GrbCuentaB = New System.Windows.Forms.GroupBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
@@ -238,7 +240,7 @@ Partial Class FrmCuentaBancaria
         Me.LsvCuentaBancaria.ContextMenuStrip = Me.CmsOpciones
         Me.LsvCuentaBancaria.FullRowSelect = True
         Me.LsvCuentaBancaria.GridLines = True
-        Me.LsvCuentaBancaria.Location = New System.Drawing.Point(6, 6)
+        Me.LsvCuentaBancaria.Location = New System.Drawing.Point(14, 5)
         Me.LsvCuentaBancaria.Name = "LsvCuentaBancaria"
         Me.LsvCuentaBancaria.Size = New System.Drawing.Size(721, 328)
         Me.LsvCuentaBancaria.TabIndex = 116
@@ -294,16 +296,18 @@ Partial Class FrmCuentaBancaria
         '
         Me.TbcCuentaBancaria.Controls.Add(Me.TabPage1)
         Me.TbcCuentaBancaria.Controls.Add(Me.TabPage2)
-        Me.TbcCuentaBancaria.Location = New System.Drawing.Point(2, -3)
+        Me.TbcCuentaBancaria.Location = New System.Drawing.Point(-5, -3)
         Me.TbcCuentaBancaria.Name = "TbcCuentaBancaria"
         Me.TbcCuentaBancaria.SelectedIndex = 0
-        Me.TbcCuentaBancaria.Size = New System.Drawing.Size(741, 363)
+        Me.TbcCuentaBancaria.Size = New System.Drawing.Size(757, 363)
         Me.TbcCuentaBancaria.TabIndex = 127
         '
         'TabPage1
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.Label6)
+        Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.Label4)
         Me.TabPage1.Controls.Add(Me.GrbCuentaB)
         Me.TabPage1.Controls.Add(Me.BtnGuardar)
@@ -317,10 +321,36 @@ Partial Class FrmCuentaBancaria
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(733, 337)
+        Me.TabPage1.Size = New System.Drawing.Size(749, 337)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestion Cuenta Bancaria"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(637, 73)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(49, 16)
+        Me.Label6.TabIndex = 133
+        Me.Label6.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(643, 26)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 132
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'Label4
         '
@@ -351,11 +381,13 @@ Partial Class FrmCuentaBancaria
         '
         'TabPage2
         '
+        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage2.Controls.Add(Me.LsvCuentaBancaria)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(733, 337)
+        Me.TabPage2.Size = New System.Drawing.Size(749, 337)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Cuenta Bancaria"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -367,7 +399,7 @@ Partial Class FrmCuentaBancaria
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.ClientSize = New System.Drawing.Size(746, 354)
         Me.Controls.Add(Me.TbcCuentaBancaria)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmCuentaBancaria"
         Me.Text = "FrmCuentaBancaria"
@@ -412,4 +444,6 @@ Partial Class FrmCuentaBancaria
     Friend WithEvents ChNombreS As ColumnHeader
     Friend WithEvents GrbCuentaB As GroupBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

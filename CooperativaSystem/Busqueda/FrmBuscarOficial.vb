@@ -129,4 +129,11 @@ Public Class FrmBuscarOficial
         FrmUsuario.MtbCodigoOficial.Text = LsvMostrarOficial.FocusedItem.SubItems(0).Text
         Close()
     End Sub
+
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Close()
+
+    End Sub
+
+
 End Class

@@ -47,6 +47,8 @@ Partial Class FrmTipoCuenta
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TbcTipoCuenta = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.GrbTipoCuenta = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -218,9 +220,9 @@ Partial Class FrmTipoCuenta
         Me.LsvTipoCuenta.ContextMenuStrip = Me.CmsOpciones
         Me.LsvTipoCuenta.FullRowSelect = True
         Me.LsvTipoCuenta.GridLines = True
-        Me.LsvTipoCuenta.Location = New System.Drawing.Point(0, 3)
+        Me.LsvTipoCuenta.Location = New System.Drawing.Point(4, 3)
         Me.LsvTipoCuenta.Name = "LsvTipoCuenta"
-        Me.LsvTipoCuenta.Size = New System.Drawing.Size(762, 312)
+        Me.LsvTipoCuenta.Size = New System.Drawing.Size(762, 324)
         Me.LsvTipoCuenta.TabIndex = 105
         Me.LsvTipoCuenta.UseCompatibleStateImageBehavior = False
         Me.LsvTipoCuenta.View = System.Windows.Forms.View.Details
@@ -265,16 +267,18 @@ Partial Class FrmTipoCuenta
         '
         Me.TbcTipoCuenta.Controls.Add(Me.TabPage1)
         Me.TbcTipoCuenta.Controls.Add(Me.TabPage2)
-        Me.TbcTipoCuenta.Location = New System.Drawing.Point(-2, -1)
+        Me.TbcTipoCuenta.Location = New System.Drawing.Point(-4, -1)
         Me.TbcTipoCuenta.Name = "TbcTipoCuenta"
         Me.TbcTipoCuenta.SelectedIndex = 0
-        Me.TbcTipoCuenta.Size = New System.Drawing.Size(776, 359)
+        Me.TbcTipoCuenta.Size = New System.Drawing.Size(781, 359)
         Me.TbcTipoCuenta.TabIndex = 116
         '
         'TabPage1
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.Label3)
+        Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.GrbTipoCuenta)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.BtnCancelar)
@@ -288,10 +292,36 @@ Partial Class FrmTipoCuenta
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(768, 333)
+        Me.TabPage1.Size = New System.Drawing.Size(773, 333)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Tipo Cuenta"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(656, 65)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 16)
+        Me.Label3.TabIndex = 131
+        Me.Label3.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(662, 18)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 130
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'GrbTipoCuenta
         '
@@ -313,7 +343,7 @@ Partial Class FrmTipoCuenta
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Location = New System.Drawing.Point(82, 6)
+        Me.Panel2.Location = New System.Drawing.Point(1, 1)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(597, 78)
         Me.Panel2.TabIndex = 128
@@ -331,11 +361,13 @@ Partial Class FrmTipoCuenta
         '
         'TabPage2
         '
+        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage2.Controls.Add(Me.LsvTipoCuenta)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(768, 333)
+        Me.TabPage2.Size = New System.Drawing.Size(773, 333)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Tipo Cuenta"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -346,7 +378,7 @@ Partial Class FrmTipoCuenta
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(769, 352)
         Me.Controls.Add(Me.TbcTipoCuenta)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmTipoCuenta"
         Me.Text = "FrmTipoCuenta"
@@ -390,4 +422,6 @@ Partial Class FrmTipoCuenta
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents GrbTipoCuenta As GroupBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

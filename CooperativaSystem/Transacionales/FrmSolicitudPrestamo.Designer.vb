@@ -26,6 +26,8 @@ Partial Class FrmSolicitudPrestamo
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSolicitudPrestamo))
         Me.TbPrestamo = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.TxtCantAvales = New System.Windows.Forms.TextBox()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.BtnNuevo = New System.Windows.Forms.Button()
@@ -108,16 +110,18 @@ Partial Class FrmSolicitudPrestamo
         '
         Me.TbPrestamo.Controls.Add(Me.TabPage1)
         Me.TbPrestamo.Controls.Add(Me.TabPage2)
-        Me.TbPrestamo.Location = New System.Drawing.Point(3, 1)
+        Me.TbPrestamo.Location = New System.Drawing.Point(-9, 1)
         Me.TbPrestamo.Name = "TbPrestamo"
         Me.TbPrestamo.SelectedIndex = 0
-        Me.TbPrestamo.Size = New System.Drawing.Size(1225, 658)
+        Me.TbPrestamo.Size = New System.Drawing.Size(1237, 658)
         Me.TbPrestamo.TabIndex = 0
         '
         'TabPage1
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.Label17)
+        Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.TxtCantAvales)
         Me.TabPage1.Controls.Add(Me.BtnGuardar)
         Me.TabPage1.Controls.Add(Me.BtnNuevo)
@@ -130,10 +134,36 @@ Partial Class FrmSolicitudPrestamo
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1217, 632)
+        Me.TabPage1.Size = New System.Drawing.Size(1229, 632)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Préstamo"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.BackColor = System.Drawing.Color.Transparent
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(18, 606)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(49, 16)
+        Me.Label17.TabIndex = 137
+        Me.Label17.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(20, 559)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 136
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'TxtCantAvales
         '
@@ -608,7 +638,7 @@ Partial Class FrmSolicitudPrestamo
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1217, 632)
+        Me.TabPage2.Size = New System.Drawing.Size(1229, 632)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Préstamos"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -719,7 +749,7 @@ Partial Class FrmSolicitudPrestamo
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.ClientSize = New System.Drawing.Size(880, 656)
         Me.Controls.Add(Me.TbPrestamo)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmSolicitudPrestamo"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -811,4 +841,6 @@ Partial Class FrmSolicitudPrestamo
     Friend WithEvents ChFechaExpiracion As ColumnHeader
     Friend WithEvents CmsOpciones As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label17 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

@@ -229,4 +229,7 @@ Public Class FrmBusquedaSolicitudPrestamoAval
         End If
     End Sub
 
+    Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
+        Me.Close()
+    End Sub
 End Class

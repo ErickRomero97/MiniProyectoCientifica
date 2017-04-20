@@ -26,6 +26,8 @@ Partial Class FrmOficial
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOficial))
         Me.TbcOficial = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.LblCancelar = New System.Windows.Forms.Label()
@@ -69,16 +71,18 @@ Partial Class FrmOficial
         '
         Me.TbcOficial.Controls.Add(Me.TabPage1)
         Me.TbcOficial.Controls.Add(Me.TabPage2)
-        Me.TbcOficial.Location = New System.Drawing.Point(1, 1)
+        Me.TbcOficial.Location = New System.Drawing.Point(-4, 1)
         Me.TbcOficial.Name = "TbcOficial"
         Me.TbcOficial.SelectedIndex = 0
-        Me.TbcOficial.Size = New System.Drawing.Size(512, 468)
+        Me.TbcOficial.Size = New System.Drawing.Size(517, 486)
         Me.TbcOficial.TabIndex = 1
         '
         'TabPage1
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.Label7)
+        Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.BtnGuardar)
         Me.TabPage1.Controls.Add(Me.LblCancelar)
@@ -92,10 +96,36 @@ Partial Class FrmOficial
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(504, 442)
+        Me.TabPage1.Size = New System.Drawing.Size(509, 460)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Oficial"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(436, 64)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(49, 16)
+        Me.Label7.TabIndex = 137
+        Me.Label7.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(442, 17)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 136
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'Label6
         '
@@ -334,11 +364,13 @@ Partial Class FrmOficial
         '
         'TabPage2
         '
+        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage2.Controls.Add(Me.LsvMostrarOficial)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(504, 442)
+        Me.TabPage2.Size = New System.Drawing.Size(509, 460)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Oficial"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -349,7 +381,7 @@ Partial Class FrmOficial
         Me.LsvMostrarOficial.ContextMenuStrip = Me.CmsOpcion
         Me.LsvMostrarOficial.FullRowSelect = True
         Me.LsvMostrarOficial.GridLines = True
-        Me.LsvMostrarOficial.Location = New System.Drawing.Point(0, 0)
+        Me.LsvMostrarOficial.Location = New System.Drawing.Point(2, 0)
         Me.LsvMostrarOficial.Name = "LsvMostrarOficial"
         Me.LsvMostrarOficial.Size = New System.Drawing.Size(505, 434)
         Me.LsvMostrarOficial.TabIndex = 0
@@ -404,7 +436,7 @@ Partial Class FrmOficial
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(509, 481)
         Me.Controls.Add(Me.TbcOficial)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmOficial"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -454,4 +486,6 @@ Partial Class FrmOficial
     Friend WithEvents CmsOpcion As ContextMenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

@@ -233,13 +233,13 @@ Public Class MDIP
     End Sub
 
     Private Sub SolicitudPrestamoAvalToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SolicitudPrestamoAvalToolStripMenuItem.Click
-        Dim MITransaccionalSolicitudPrestamoAval As New FrmSolicitudPrestamo()
+        Dim MITransaccionalSolicitudPrestamoAval As New FrmSolicitudPrestamoAval()
         MITransaccionalSolicitudPrestamoAval.MdiParent = Me
         MITransaccionalSolicitudPrestamoAval.Show()
         PBLogoPequeño.BringToFront()
         PBLogoGrande.SendToBack()
         PnlFondo.SendToBack()
-        MITransaccionalSolicitudPrestamoAval.Location = New Point(350, 0)
+        MITransaccionalSolicitudPrestamoAval.Location = New Point(500, 100)
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs)

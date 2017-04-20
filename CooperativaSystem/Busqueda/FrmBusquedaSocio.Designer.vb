@@ -39,6 +39,8 @@ Partial Class FrmBusquedaSocio
         Me.ChProfecion = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'LsvMostrarSocio
@@ -132,6 +134,32 @@ Partial Class FrmBusquedaSocio
         Me.Label12.TabIndex = 96
         Me.Label12.Text = "Busqueda Socio"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(851, 68)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 16)
+        Me.Label2.TabIndex = 99
+        Me.Label2.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(857, 21)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 98
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
         'FrmBusquedaSocio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -139,11 +167,13 @@ Partial Class FrmBusquedaSocio
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(936, 475)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.LsvMostrarSocio)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtBuscar)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(80, 200)
         Me.Name = "FrmBusquedaSocio"
@@ -170,4 +200,6 @@ Partial Class FrmBusquedaSocio
     Friend WithEvents ChProfecion As ColumnHeader
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents Label12 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

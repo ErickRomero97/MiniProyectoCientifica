@@ -44,6 +44,8 @@ Partial Class FrmNacionalidad
         Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TbCNacionalidad = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.GrbNacionalidad = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -198,7 +200,7 @@ Partial Class FrmNacionalidad
         Me.LsvNac.ContextMenuStrip = Me.CmsOpciones
         Me.LsvNac.FullRowSelect = True
         Me.LsvNac.GridLines = True
-        Me.LsvNac.Location = New System.Drawing.Point(0, 6)
+        Me.LsvNac.Location = New System.Drawing.Point(4, 5)
         Me.LsvNac.Name = "LsvNac"
         Me.LsvNac.Size = New System.Drawing.Size(715, 316)
         Me.LsvNac.TabIndex = 94
@@ -240,16 +242,18 @@ Partial Class FrmNacionalidad
         '
         Me.TbCNacionalidad.Controls.Add(Me.TabPage1)
         Me.TbCNacionalidad.Controls.Add(Me.TabPage2)
-        Me.TbCNacionalidad.Location = New System.Drawing.Point(3, 1)
+        Me.TbCNacionalidad.Location = New System.Drawing.Point(-4, 1)
         Me.TbCNacionalidad.Name = "TbCNacionalidad"
         Me.TbCNacionalidad.SelectedIndex = 0
-        Me.TbCNacionalidad.Size = New System.Drawing.Size(719, 348)
+        Me.TbCNacionalidad.Size = New System.Drawing.Size(729, 348)
         Me.TbCNacionalidad.TabIndex = 105
         '
         'TabPage1
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.Label2)
+        Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.GrbNacionalidad)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.BtnCancelar)
@@ -263,10 +267,36 @@ Partial Class FrmNacionalidad
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(711, 322)
+        Me.TabPage1.Size = New System.Drawing.Size(721, 322)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestion Nacionalidad"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(657, 53)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 16)
+        Me.Label2.TabIndex = 131
+        Me.Label2.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(663, 6)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 130
+        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'GrbNacionalidad
         '
@@ -304,11 +334,13 @@ Partial Class FrmNacionalidad
         '
         'TabPage2
         '
+        Me.TabPage2.BackgroundImage = CType(resources.GetObject("TabPage2.BackgroundImage"), System.Drawing.Image)
+        Me.TabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.TabPage2.Controls.Add(Me.LsvNac)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(711, 322)
+        Me.TabPage2.Size = New System.Drawing.Size(721, 322)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Nacionalidad"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -319,7 +351,7 @@ Partial Class FrmNacionalidad
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(721, 345)
         Me.Controls.Add(Me.TbCNacionalidad)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmNacionalidad"
         Me.Text = "FrmNacionalidad"
@@ -360,4 +392,6 @@ Partial Class FrmNacionalidad
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
     Friend WithEvents GrbNacionalidad As GroupBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class

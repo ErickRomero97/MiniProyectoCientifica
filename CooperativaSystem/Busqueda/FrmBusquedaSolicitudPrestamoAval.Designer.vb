@@ -35,6 +35,8 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RdoCodSocio = New System.Windows.Forms.RadioButton()
         Me.RdoCodSolicitudAval = New System.Windows.Forms.RadioButton()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -77,7 +79,7 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnBuscar.FlatAppearance.BorderSize = 0
         Me.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnBuscar.Location = New System.Drawing.Point(428, 248)
+        Me.BtnBuscar.Location = New System.Drawing.Point(479, 248)
         Me.BtnBuscar.Name = "BtnBuscar"
         Me.BtnBuscar.Size = New System.Drawing.Size(92, 39)
         Me.BtnBuscar.TabIndex = 104
@@ -86,7 +88,7 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         '
         'TxtBuscar
         '
-        Me.TxtBuscar.Location = New System.Drawing.Point(43, 267)
+        Me.TxtBuscar.Location = New System.Drawing.Point(110, 258)
         Me.TxtBuscar.Name = "TxtBuscar"
         Me.TxtBuscar.Size = New System.Drawing.Size(355, 20)
         Me.TxtBuscar.TabIndex = 106
@@ -99,7 +101,7 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Location = New System.Drawing.Point(4, 9)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(656, 91)
+        Me.Panel2.Size = New System.Drawing.Size(598, 91)
         Me.Panel2.TabIndex = 120
         '
         'Label1
@@ -115,6 +117,7 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.Controls.Add(Me.RdoCodSocio)
         Me.GroupBox1.Controls.Add(Me.RdoCodSolicitudAval)
         Me.GroupBox1.Location = New System.Drawing.Point(73, 130)
@@ -148,6 +151,32 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.RdoCodSolicitudAval.Text = "Codigo de la Solicitud de Prestamo"
         Me.RdoCodSolicitudAval.UseVisualStyleBackColor = True
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(622, 83)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(49, 16)
+        Me.Label2.TabIndex = 123
+        Me.Label2.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(628, 36)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 122
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
         'FrmBusquedaSolicitudPrestamoAval
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -155,13 +184,15 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(689, 472)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.BtnCerrar)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.TxtBuscar)
         Me.Controls.Add(Me.LsvSolicitudPA)
         Me.Controls.Add(Me.BtnBuscar)
         Me.DoubleBuffered = True
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FrmBusquedaSolicitudPrestamoAval"
         Me.Text = "FrmBusquedaSolicitudPrestamoAval"
@@ -185,4 +216,6 @@ Partial Class FrmBusquedaSolicitudPrestamoAval
     Friend WithEvents RdoCodSocio As RadioButton
     Friend WithEvents RdoCodSolicitudAval As RadioButton
     Friend WithEvents ChApellidoSocio As ColumnHeader
+    Friend WithEvents Label2 As Label
+    Friend WithEvents BtnCerrar As Button
 End Class
