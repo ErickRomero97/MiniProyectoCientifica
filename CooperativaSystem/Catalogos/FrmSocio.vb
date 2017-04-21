@@ -6,6 +6,10 @@ Public Class FrmSocio
         LlenarComboboxNacionalidad()
         LlenarComboboxProfesion()
         MostrarSocio()
+        CboEstadoCivil.SelectedValue = -1
+        CboNacionalidad.SelectedValue = -1
+        CboProfecion.SelectedValue = -1
+        CboSexo.SelectedValue = -1
         HabilitarBotones(True, False, False, False, False)
     End Sub
 
@@ -36,7 +40,7 @@ Public Class FrmSocio
                         .SubItems.Add(VerSocio("LugarTrabajo").ToString)
                         .SubItems.Add(VerSocio("Correo").ToString)
                         .SubItems.Add(VerSocio("Sexo").ToString)
-                        .SubItems.Add(VerSocio("Estado").ToString)
+                        .SubItems.Add(VerSocio("EstadoCivil").ToString)
                         .SubItems.Add(VerSocio("Nacionalidad").ToString)
                         .SubItems.Add(VerSocio("Profesion").ToString)
                     End With
@@ -58,7 +62,7 @@ Public Class FrmSocio
         btnCancelar.Enabled = Cancelar
         GbDatos.Enabled = datos
     End Sub
-    Private Sub InsertarSocio() '
+    Private Sub InsertarSocio()
 
         If cnn.State = ConnectionState.Open Then
             cnn.Close()
@@ -80,11 +84,11 @@ Public Class FrmSocio
                     .Parameters.Add("@LugarTrabajo", SqlDbType.NVarChar, 300).Value = TxtLugarTrabajo.Text.Trim
                     .Parameters.Add("@correo", SqlDbType.NVarChar, 60).Value = TxtEmail.Text.Trim
                     .Parameters.Add("@IdSexo", SqlDbType.Int).Value = CInt(CboSexo.SelectedValue)
-                    .Parameters.Add("@IdEstado", SqlDbType.Int).Value = CInt(Cboestadocivil.SelectedValue)
+                    .Parameters.Add("@IdEstadoCivil", SqlDbType.Int).Value = CInt(CboEstadoCivil.SelectedValue)
                     .Parameters.Add("@IdNacionalidad", SqlDbType.Int).Value = CInt(CboNacionalidad.SelectedValue)
                     .Parameters.Add("@IdProfecional", SqlDbType.Int).Value = CInt(CboProfecion.SelectedValue)
                     .ExecuteNonQuery()
-                    MessageBox.Show("El registro de Socio Agregado", "Coperativa", MessageBoxButtons.OK)
+                    MessageBox.Show("El registro de Socio Agregado", "CoperativaSystem", MessageBoxButtons.OK)
                     MostrarSocio()
                 End With
             End Using
@@ -119,7 +123,7 @@ Public Class FrmSocio
                     .Parameters.Add("@LugarTrabajo", SqlDbType.NVarChar, 300).Value = TxtLugarTrabajo.Text.Trim
                     .Parameters.Add("@correo", SqlDbType.NVarChar, 60).Value = TxtEmail.Text.Trim
                     .Parameters.Add("@IdSexo", SqlDbType.Int).Value = CInt(CboSexo.SelectedValue)
-                    .Parameters.Add("@IdEstado", SqlDbType.Int).Value = CInt(Cboestadocivil.SelectedValue)
+                    .Parameters.Add("@IdEstadoCivil", SqlDbType.Int).Value = CInt(CboEstadoCivil.SelectedValue)
                     .Parameters.Add("@IdNacionalidad", SqlDbType.Int).Value = CInt(CboNacionalidad.SelectedValue)
                     .Parameters.Add("@IdProfecional", SqlDbType.Int).Value = CInt(CboProfecion.SelectedValue)
                     .ExecuteNonQuery()
@@ -158,7 +162,7 @@ Public Class FrmSocio
         mtbTelefono.Text = Nothing
         TxtDireccion.Text = Nothing
         CboSexo.SelectedIndex = -1
-        Cboestadocivil.SelectedIndex = -1
+        CboEstadoCivil.SelectedIndex = -1
         CboNacionalidad.SelectedIndex = -1
         CboProfecion.SelectedIndex = -1
     End Sub
@@ -221,16 +225,16 @@ Public Class FrmSocio
         Try
             Using cmd As New SqlCommand
                 With cmd
-                    .CommandText = "Sp_LLenarComboEstado"
+                    .CommandText = "Sp_LLenarComboEstadoCivil"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cnn
                 End With
                 Dim da As New SqlDataAdapter(cmd)
                 Dim ds As New DataSet
-                da.Fill(ds, "Estado")
-                Me.Cboestadocivil.DataSource = ds.Tables(0)
-                Me.Cboestadocivil.ValueMember = ds.Tables(0).Columns("IdEstado").ToString
-                Me.Cboestadocivil.DisplayMember = ds.Tables(0).Columns("Estado").ToString
+                da.Fill(ds, "EstadoCivil")
+                Me.CboEstadoCivil.DataSource = ds.Tables(0)
+                Me.CboEstadoCivil.ValueMember = ds.Tables(0).Columns("IdEstadoCivil").ToString
+                Me.CboEstadoCivil.DisplayMember = ds.Tables(0).Columns("EstadoCivil").ToString
 
             End Using
         Catch ex As Exception
@@ -299,6 +303,7 @@ Public Class FrmSocio
 
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles BtnNuevo.Click
         HabilitarBotones(False, True, False, True, True)
+        Limpiar()
     End Sub
 
     Private Sub EditarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EditarToolStripMenuItem.Click
@@ -312,7 +317,7 @@ Public Class FrmSocio
         TxtLugarTrabajo.Text = LsvMostrarSocio.FocusedItem.SubItems(7).Text
         TxtEmail.Text = LsvMostrarSocio.FocusedItem.SubItems(8).Text
         CboSexo.Text = LsvMostrarSocio.FocusedItem.SubItems(9).Text
-        Cboestadocivil.Text = LsvMostrarSocio.FocusedItem.SubItems(10).Text
+        CboEstadoCivil.Text = LsvMostrarSocio.FocusedItem.SubItems(10).Text
         CboNacionalidad.Text = LsvMostrarSocio.FocusedItem.SubItems(11).Text
         CboProfecion.Text = LsvMostrarSocio.FocusedItem.SubItems(12).Text
         HabilitarBotones(False, False, True, True, True)
@@ -325,7 +330,7 @@ Public Class FrmSocio
         HabilitarBotones(True, False, False, False, False)
     End Sub
 
-    Private Sub btnActualizar_Click(sender As Object, e As EventArgs)
+    Private Sub btnActualizar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
         If Validar(TxtCodSocio, "Debe ingresar el codigo del socio") Then
         ElseIf Validar(TxtRTNSocio, "Debe ingresar el RTN Socio") Then
         ElseIf Validar(TxtNombre, "Debe ingresar un nombre de empleado") Then
@@ -381,4 +386,6 @@ Public Class FrmSocio
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Me.Close()
     End Sub
+
+
 End Class

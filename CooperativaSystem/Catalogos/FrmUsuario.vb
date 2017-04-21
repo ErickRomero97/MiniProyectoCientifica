@@ -354,7 +354,7 @@ Public Class FrmUsuario
     End Sub
 
     Private Sub MostrarImagen()
-        Dim connection As New SqlConnection("Data Source=NIXONSANCHEZ;Initial Catalog=CooperativaSystem;Integrated Security=True")
+        Dim connection As New SqlConnection("Data Source=WALTERPC\SQLEXPRESS;Initial Catalog=CooperativaSystem;Integrated Security=True")
         Dim command As New SqlCommand("SELECT Foto FROM Usuario where IdUsuario = @var", connection)
         command.Parameters.Add("@var", SqlDbType.VarChar).Value = LsvMostrarUsuario.FocusedItem.SubItems(0).Text
 

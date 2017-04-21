@@ -215,7 +215,7 @@ Partial Class FrmTipoCuenta
         '
         'LsvTipoCuenta
         '
-        Me.LsvTipoCuenta.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.LsvTipoCuenta.BackColor = System.Drawing.Color.White
         Me.LsvTipoCuenta.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdTipoCuenta, Me.ChNombreTipoCuenta, Me.ChDescTipoCuenta})
         Me.LsvTipoCuenta.ContextMenuStrip = Me.CmsOpciones
         Me.LsvTipoCuenta.FullRowSelect = True

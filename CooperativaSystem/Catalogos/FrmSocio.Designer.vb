@@ -47,7 +47,7 @@ Partial Class FrmSocio
         Me.lblapellidos = New System.Windows.Forms.Label()
         Me.CboSexo = New System.Windows.Forms.ComboBox()
         Me.TxtApellido = New System.Windows.Forms.TextBox()
-        Me.Cboestadocivil = New System.Windows.Forms.ComboBox()
+        Me.CboEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -208,7 +208,7 @@ Partial Class FrmSocio
         Me.GbDatos.Controls.Add(Me.lblapellidos)
         Me.GbDatos.Controls.Add(Me.CboSexo)
         Me.GbDatos.Controls.Add(Me.TxtApellido)
-        Me.GbDatos.Controls.Add(Me.Cboestadocivil)
+        Me.GbDatos.Controls.Add(Me.CboEstadoCivil)
         Me.GbDatos.Controls.Add(Me.Label1)
         Me.GbDatos.Controls.Add(Me.Label7)
         Me.GbDatos.Controls.Add(Me.Label2)
@@ -358,14 +358,14 @@ Partial Class FrmSocio
         Me.TxtApellido.Size = New System.Drawing.Size(158, 20)
         Me.TxtApellido.TabIndex = 3
         '
-        'Cboestadocivil
+        'CboEstadoCivil
         '
-        Me.Cboestadocivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.Cboestadocivil.FormattingEnabled = True
-        Me.Cboestadocivil.Location = New System.Drawing.Point(132, 316)
-        Me.Cboestadocivil.Name = "Cboestadocivil"
-        Me.Cboestadocivil.Size = New System.Drawing.Size(125, 21)
-        Me.Cboestadocivil.TabIndex = 10
+        Me.CboEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboEstadoCivil.FormattingEnabled = True
+        Me.CboEstadoCivil.Location = New System.Drawing.Point(132, 316)
+        Me.CboEstadoCivil.Name = "CboEstadoCivil"
+        Me.CboEstadoCivil.Size = New System.Drawing.Size(125, 21)
+        Me.CboEstadoCivil.TabIndex = 10
         '
         'Label1
         '
@@ -661,7 +661,7 @@ Partial Class FrmSocio
     Friend WithEvents lblapellidos As Label
     Friend WithEvents CboSexo As ComboBox
     Friend WithEvents TxtApellido As TextBox
-    Friend WithEvents Cboestadocivil As ComboBox
+    Friend WithEvents CboEstadoCivil As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents Label2 As Label

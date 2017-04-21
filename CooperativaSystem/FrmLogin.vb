@@ -19,7 +19,17 @@ Public Class FrmLogin
 
                 If reader.HasRows Then
                     reader.Read()
+                    Dim name As String = reader("NombreOficial")
+                    Dim username As String() = name.Split(" ")
+                    Dim name2 As String = reader("ApellidoOficial")
+                    Dim username2 As String() = name2.Split(" ")
                     FrmPrincipal.Show()
+                    FrmPrincipal.LblUser.Text = String.Format("{0} {1}", username(0), username2(0))
+                    FrmPrincipal.LblIdUsuario.Text = String.Format("{0}", reader(0).ToString)
+
+                    Dim imagen As New System.IO.MemoryStream(DirectCast(reader("Foto"), [Byte]()))
+                    Dim ObjImagen As Image = Image.FromStream(imagen)
+                    FrmPrincipal.PbUser.BackgroundImage = ObjImagen
                     Me.Close()
                 Else
                     MsgBox("Usuario y Contrasena invalido")
@@ -35,13 +45,8 @@ Public Class FrmLogin
         Me.Close()
     End Sub
 
-    Private Sub TxtUser_Click(sender As Object, e As EventArgs) Handles TxtUser.Click
-        TxtUser.Text = ""
-    End Sub
 
+    Private Sub FrmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    Private Sub TxtPassword_Click(sender As Object, e As EventArgs) Handles TxtPassword.Click
-        TxtPassword.Text = ""
-        TxtPassword.PasswordChar = "*"
     End Sub
 End Class

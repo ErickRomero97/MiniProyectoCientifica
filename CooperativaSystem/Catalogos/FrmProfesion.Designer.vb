@@ -60,7 +60,7 @@ Partial Class FrmProfesion
         '
         'LsvProfesion
         '
-        Me.LsvProfesion.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.LsvProfesion.BackColor = System.Drawing.Color.White
         Me.LsvProfesion.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdProfesion, Me.ChProfesion})
         Me.LsvProfesion.ContextMenuStrip = Me.CmsOpciones
         Me.LsvProfesion.FullRowSelect = True

@@ -44,12 +44,12 @@ Partial Class FrmTipoPrestamo
         Me.ChTipoPrestamo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.TbcTipoPrestamo = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.GrbTipoPrestamo = New System.Windows.Forms.GroupBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.CmsOpciones.SuspendLayout()
         Me.TbcTipoPrestamo.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -216,7 +216,7 @@ Partial Class FrmTipoPrestamo
         '
         'LsvtipoPrestamo
         '
-        Me.LsvtipoPrestamo.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.LsvtipoPrestamo.BackColor = System.Drawing.Color.White
         Me.LsvtipoPrestamo.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdTipoPrestamo, Me.ChTipoPrestamo})
         Me.LsvtipoPrestamo.ContextMenuStrip = Me.CmsOpciones
         Me.LsvtipoPrestamo.FullRowSelect = True
@@ -272,6 +272,32 @@ Partial Class FrmTipoPrestamo
         Me.TabPage1.Text = "Gestión Tipo Prestamo"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(590, 75)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(49, 16)
+        Me.Label3.TabIndex = 133
+        Me.Label3.Text = "cerrar"
+        '
+        'BtnCerrar
+        '
+        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
+        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
+        Me.BtnCerrar.FlatAppearance.BorderSize = 0
+        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
+        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
+        Me.BtnCerrar.Location = New System.Drawing.Point(596, 28)
+        Me.BtnCerrar.Name = "BtnCerrar"
+        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
+        Me.BtnCerrar.TabIndex = 132
+        Me.BtnCerrar.UseVisualStyleBackColor = False
+        '
         'GrbTipoPrestamo
         '
         Me.GrbTipoPrestamo.Controls.Add(Me.TxtTipoPrestamo)
@@ -318,32 +344,6 @@ Partial Class FrmTipoPrestamo
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Listar Tipo Prestamo"
         Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(590, 75)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(49, 16)
-        Me.Label3.TabIndex = 133
-        Me.Label3.Text = "cerrar"
-        '
-        'BtnCerrar
-        '
-        Me.BtnCerrar.BackColor = System.Drawing.Color.DeepSkyBlue
-        Me.BtnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Aqua
-        Me.BtnCerrar.FlatAppearance.BorderSize = 0
-        Me.BtnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCerrar.ForeColor = System.Drawing.Color.Transparent
-        Me.BtnCerrar.Image = CType(resources.GetObject("BtnCerrar.Image"), System.Drawing.Image)
-        Me.BtnCerrar.Location = New System.Drawing.Point(596, 28)
-        Me.BtnCerrar.Name = "BtnCerrar"
-        Me.BtnCerrar.Size = New System.Drawing.Size(39, 44)
-        Me.BtnCerrar.TabIndex = 132
-        Me.BtnCerrar.UseVisualStyleBackColor = False
         '
         'FrmTipoPrestamo
         '

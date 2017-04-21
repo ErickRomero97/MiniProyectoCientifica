@@ -4,6 +4,7 @@ Public Class FrmSolicitudPrestamo
         Call HabilitarBotones(True, False, False, False, False, False, False, False)
         Call LlenarComboTipoPrestamo()
         Call MostrarPrestamos()
+        CboTipoPrestamo.SelectedValue = -1
     End Sub
 
     Private Sub Limpiar()
@@ -168,7 +169,7 @@ Public Class FrmSolicitudPrestamo
                     .Parameters.Add("@FinalidadPrestamo", SqlDbType.NVarChar, 300).Value = TxtFinalidad.Text.Trim
                     .Parameters.Add("@CodSocio", SqlDbType.NVarChar, 15).Value = TxtIdentidad.Text.Trim
                     .Parameters.Add("@IdTipoPrestamo", SqlDbType.Int).Value = CboTipoPrestamo.SelectedValue
-                    .Parameters.Add("@IdUsuario", SqlDbType.Int).Value = 1
+                    .Parameters.Add("@IdUsuario", SqlDbType.Int).Value = CInt(FrmPrincipal.LblIdUsuario.Text)
                     .ExecuteNonQuery()
                     MessageBox.Show("Se ha guardado el préstamo con éxito", "Cooperativa System", MessageBoxButtons.OK)
                     Call MostrarPrestamos()
@@ -235,7 +236,6 @@ Public Class FrmSolicitudPrestamo
                     .Parameters.Add("@Estado", SqlDbType.NVarChar, 30).Value = "Pendiente"
 
                     .ExecuteNonQuery()
-                    MessageBox.Show("Se ha guardado el préstamo con éxito", "Cooperativa System", MessageBoxButtons.OK)
                 End With
             Catch ex As Exception
                 MessageBox.Show(ex.Message)
@@ -259,7 +259,7 @@ Public Class FrmSolicitudPrestamo
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cnn
                     .Parameters.Add("@NumPrestamo", SqlDbType.NVarChar, 11).Value = TxtNumPrestamo.Text.Trim
-                    If TxtCantAvales.Text = 2 Then
+                    If TxtCantAvales.Text >= 2 Then
                         .Parameters.Add("@Estado", SqlDbType.NVarChar, 30).Value = "Aprobado"
                     Else
                         .Parameters.Add("@Estado", SqlDbType.NVarChar, 30).Value = "Rechazado"
@@ -327,9 +327,20 @@ Public Class FrmSolicitudPrestamo
     End Sub
 
     Private Sub BtnGuardar_Click_1(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-        Call HabilitarBotones(False, False, False, False, True, True, True, True)
-        Call AgregarPrestamo()
-        Call AgregarEstadoPrestamo()
+        Dim SaldoTotal As Double
+
+        SaldoTotal = CDbl(TxtSaldo.Text) * 2
+
+        If Validar() Then
+            If TxtSumaSolicitada.Text > SaldoTotal Then
+                MessageBox.Show("No Puede Solicitar Mas del 200% de su Saldo total de sus Cuentas Bancarias ")
+                TxtSumaSolicitada.Focus()
+            Else
+                Call AgregarPrestamo()
+                Call AgregarEstadoPrestamo()
+                Call HabilitarBotones(False, False, False, False, True, True, True, True)
+            End If
+        End If
     End Sub
 
     Private Sub BtnCancelar_Click_1(sender As Object, e As EventArgs) Handles BtnCancelar.Click
@@ -338,19 +349,21 @@ Public Class FrmSolicitudPrestamo
     End Sub
 
     Private Sub BtnAgregar_Click_1(sender As Object, e As EventArgs) Handles BtnAgregar.Click
+        FrmBusquedaSocio.FormBorderStyle = FormBorderStyle.FixedSingle
         FrmBusquedaSocio.ShowDialog()
         Call MostrarCuentas()
         Call CalcularSaldo()
     End Sub
 
     Private Sub BtnAgregarAval_Click_1(sender As Object, e As EventArgs) Handles BtnAgregarAval.Click
+        FrmSolicitudPrestamoAval.FormBorderStyle=FormBorderStyle.FixedSingle
         FrmSolicitudPrestamoAval.ShowDialog()
     End Sub
 
     Private Sub BtnAprobarPrestamo_Click(sender As Object, e As EventArgs) Handles BtnAprobarPrestamo.Click
         Call ContarAvales()
 
-        If TxtCantAvales.Text = 2 Then
+        If TxtCantAvales.Text >= 2 Then
             Call ActualizarEstadoPrestamo()
             MessageBox.Show("El préstamo ha sido aprobado con éxito.", "Cooperativa System", MessageBoxButtons.OK)
         Else
@@ -363,11 +376,95 @@ Public Class FrmSolicitudPrestamo
     End Sub
 
     Private Sub BtnEditar_Click(sender As Object, e As EventArgs) Handles BtnEditar.Click
-        Call ActualizarPrestamo()
+        If Validar() Then
+            Call ActualizarPrestamo()
+        End If
     End Sub
 
     Private Sub BtnCerrar_Click_1(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Me.Close()
     End Sub
+    Private Sub BtnNuevo_MouseLeave(sender As Object, e As EventArgs) Handles BtnNuevo.MouseLeave
+        LblNuevo.Text = ""
+    End Sub
 
+    Private Sub BtnNuevo_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnNuevo.MouseMove
+        LblNuevo.Text = "Nuevo"
+    End Sub
+
+    Private Sub BtnGuardar_MouseLeave(sender As Object, e As EventArgs) Handles BtnGuardar.MouseLeave
+        LblGuardar.Text = ""
+    End Sub
+
+    Private Sub BtnGuardar_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnGuardar.MouseMove
+        LblGuardar.Text = "Guardar"
+    End Sub
+
+    Private Sub BtnEditar_MouseLeave(sender As Object, e As EventArgs) Handles BtnEditar.MouseLeave
+        LblEditar.Text = ""
+    End Sub
+
+    Private Sub BtnEditar_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnEditar.MouseMove
+        LblEditar.Text = "Editar"
+    End Sub
+
+    Private Sub BtnCancelar_MouseLeave(sender As Object, e As EventArgs) Handles BtnCancelar.MouseLeave
+        LblCancelar.Text = ""
+    End Sub
+
+    Private Sub BtnCancelar_MouseMove(sender As Object, e As MouseEventArgs) Handles BtnCancelar.MouseMove
+        LblCancelar.Text = "Cancelar"
+    End Sub
+
+    Private Function Validar() As Boolean
+        Dim estado As Boolean
+
+        If TxtNumPrestamo.Text = Nothing And CboTipoPrestamo.SelectedValue = Nothing And TxtIdentidad.Text = Nothing And TxtSumaSolicitada.Text = Nothing And TxtSumaOtorgada.Text = Nothing And TxtPlazo.Text = Nothing And TxtTasa.Text = Nothing And TxtFinalidad.Text = Nothing Then
+            MessageBox.Show("Selecione e ingrese todo los valores de la Relacion Solicitud de Prestamo.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            TxtNumPrestamo.Focus()
+            estado = False
+        ElseIf TxtNumPrestamo.Text = Nothing Then
+            MessageBox.Show("Ingrese el numero del Prestamo.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            TxtNumPrestamo.Focus()
+            estado = False
+        ElseIf CboTipoPrestamo.SelectedValue = Nothing Then
+            MessageBox.Show("Seleccione un  Tipo de Prestamo.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            estado = False
+        ElseIf TxtIdentidad.Text = Nothing Then
+            MessageBox.Show("Selecione los datos del socio.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            estado = False
+        ElseIf TxtSumaSolicitada.Text = Nothing Then
+            MessageBox.Show("Ingrese la suma solicitada para el prestamo.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            TxtSumaSolicitada.Focus()
+            estado = False
+        ElseIf TxtSumaOtorgada.Text = Nothing Then
+            MessageBox.Show("Ingrese la suma otorgada del prestamo.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            TxtSumaOtorgada.Focus()
+            estado = False
+        ElseIf TxtPlazo.Text = Nothing Then
+            MessageBox.Show("Ingrese el plazo del prestamo.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            TxtPlazo.Focus()
+            estado = False
+        ElseIf TxtTasa.Text = Nothing Then
+            MessageBox.Show("Ingrese la taza del prestamo.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            TxtTasa.Focus()
+            estado = False
+        ElseIf TxtFinalidad.Text = Nothing Then
+            MessageBox.Show("Ingrese la finalidad del prestamo.", "CooperativaSystem", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call HabilitarBotones(False, True, False, True, True, True, True, True)
+            TxtFinalidad.Focus()
+            estado = False
+        Else
+            estado = True
+        End If
+        Return estado
+    End Function
 End Class

@@ -26,30 +26,30 @@ Partial Class FrmOficial
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmOficial))
         Me.TbcOficial = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.BtnCerrar = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
         Me.LblCancelar = New System.Windows.Forms.Label()
-        Me.BtnNuevo = New System.Windows.Forms.Button()
         Me.LblEditar = New System.Windows.Forms.Label()
-        Me.BtnEditar = New System.Windows.Forms.Button()
         Me.LblGuardar = New System.Windows.Forms.Label()
-        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.LblNuevo = New System.Windows.Forms.Label()
         Me.GbDatos = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.TxtApellido = New System.Windows.Forms.TextBox()
         Me.labelapellido = New System.Windows.Forms.Label()
         Me.MtbTelefono = New System.Windows.Forms.MaskedTextBox()
         Me.MtbCodOficial = New System.Windows.Forms.MaskedTextBox()
         Me.CboSexo = New System.Windows.Forms.ComboBox()
-        Me.TxtDireccion = New System.Windows.Forms.TextBox()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.BtnCerrar = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.BtnNuevo = New System.Windows.Forms.Button()
+        Me.BtnEditar = New System.Windows.Forms.Button()
+        Me.BtnCancelar = New System.Windows.Forms.Button()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.LsvMostrarOficial = New System.Windows.Forms.ListView()
         Me.ChCodigo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -81,18 +81,18 @@ Partial Class FrmOficial
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.LblCancelar)
+        Me.TabPage1.Controls.Add(Me.LblEditar)
+        Me.TabPage1.Controls.Add(Me.LblGuardar)
+        Me.TabPage1.Controls.Add(Me.LblNuevo)
+        Me.TabPage1.Controls.Add(Me.GbDatos)
         Me.TabPage1.Controls.Add(Me.Label7)
         Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.Label6)
         Me.TabPage1.Controls.Add(Me.BtnGuardar)
-        Me.TabPage1.Controls.Add(Me.LblCancelar)
         Me.TabPage1.Controls.Add(Me.BtnNuevo)
-        Me.TabPage1.Controls.Add(Me.LblEditar)
         Me.TabPage1.Controls.Add(Me.BtnEditar)
-        Me.TabPage1.Controls.Add(Me.LblGuardar)
         Me.TabPage1.Controls.Add(Me.BtnCancelar)
-        Me.TabPage1.Controls.Add(Me.LblNuevo)
-        Me.TabPage1.Controls.Add(Me.GbDatos)
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -100,6 +100,170 @@ Partial Class FrmOficial
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Oficial"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'LblCancelar
+        '
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(347, 431)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(0, 15)
+        Me.LblCancelar.TabIndex = 139
+        '
+        'LblEditar
+        '
+        Me.LblEditar.AutoSize = True
+        Me.LblEditar.BackColor = System.Drawing.Color.Transparent
+        Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEditar.Location = New System.Drawing.Point(266, 431)
+        Me.LblEditar.Name = "LblEditar"
+        Me.LblEditar.Size = New System.Drawing.Size(0, 15)
+        Me.LblEditar.TabIndex = 140
+        '
+        'LblGuardar
+        '
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(186, 431)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
+        Me.LblGuardar.TabIndex = 141
+        '
+        'LblNuevo
+        '
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(109, 431)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
+        Me.LblNuevo.TabIndex = 142
+        '
+        'GbDatos
+        '
+        Me.GbDatos.Controls.Add(Me.Label3)
+        Me.GbDatos.Controls.Add(Me.TxtDireccion)
+        Me.GbDatos.Controls.Add(Me.TxtApellido)
+        Me.GbDatos.Controls.Add(Me.labelapellido)
+        Me.GbDatos.Controls.Add(Me.MtbTelefono)
+        Me.GbDatos.Controls.Add(Me.MtbCodOficial)
+        Me.GbDatos.Controls.Add(Me.CboSexo)
+        Me.GbDatos.Controls.Add(Me.TxtNombre)
+        Me.GbDatos.Controls.Add(Me.Label5)
+        Me.GbDatos.Controls.Add(Me.Label4)
+        Me.GbDatos.Controls.Add(Me.Label2)
+        Me.GbDatos.Controls.Add(Me.Label1)
+        Me.GbDatos.Location = New System.Drawing.Point(81, 104)
+        Me.GbDatos.Name = "GbDatos"
+        Me.GbDatos.Size = New System.Drawing.Size(347, 253)
+        Me.GbDatos.TabIndex = 138
+        Me.GbDatos.TabStop = False
+        Me.GbDatos.Text = "Datos Oficial"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(47, 113)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(55, 13)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "Dirección:"
+        '
+        'TxtDireccion
+        '
+        Me.TxtDireccion.Location = New System.Drawing.Point(111, 110)
+        Me.TxtDireccion.Multiline = True
+        Me.TxtDireccion.Name = "TxtDireccion"
+        Me.TxtDireccion.Size = New System.Drawing.Size(159, 61)
+        Me.TxtDireccion.TabIndex = 14
+        '
+        'TxtApellido
+        '
+        Me.TxtApellido.Location = New System.Drawing.Point(111, 84)
+        Me.TxtApellido.Name = "TxtApellido"
+        Me.TxtApellido.Size = New System.Drawing.Size(159, 20)
+        Me.TxtApellido.TabIndex = 3
+        '
+        'labelapellido
+        '
+        Me.labelapellido.AutoSize = True
+        Me.labelapellido.Location = New System.Drawing.Point(31, 87)
+        Me.labelapellido.Name = "labelapellido"
+        Me.labelapellido.Size = New System.Drawing.Size(79, 13)
+        Me.labelapellido.TabIndex = 12
+        Me.labelapellido.Text = "Apellido Oficial:"
+        '
+        'MtbTelefono
+        '
+        Me.MtbTelefono.Location = New System.Drawing.Point(111, 182)
+        Me.MtbTelefono.Mask = "00-00-00-00"
+        Me.MtbTelefono.Name = "MtbTelefono"
+        Me.MtbTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.MtbTelefono.Size = New System.Drawing.Size(159, 20)
+        Me.MtbTelefono.TabIndex = 5
+        '
+        'MtbCodOficial
+        '
+        Me.MtbCodOficial.Location = New System.Drawing.Point(111, 31)
+        Me.MtbCodOficial.Mask = "0000-0000-00000"
+        Me.MtbCodOficial.Name = "MtbCodOficial"
+        Me.MtbCodOficial.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
+        Me.MtbCodOficial.Size = New System.Drawing.Size(159, 20)
+        Me.MtbCodOficial.TabIndex = 1
+        '
+        'CboSexo
+        '
+        Me.CboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.CboSexo.FormattingEnabled = True
+        Me.CboSexo.Location = New System.Drawing.Point(111, 209)
+        Me.CboSexo.Name = "CboSexo"
+        Me.CboSexo.Size = New System.Drawing.Size(156, 21)
+        Me.CboSexo.TabIndex = 6
+        '
+        'TxtNombre
+        '
+        Me.TxtNombre.Location = New System.Drawing.Point(111, 58)
+        Me.TxtNombre.Name = "TxtNombre"
+        Me.TxtNombre.Size = New System.Drawing.Size(159, 20)
+        Me.TxtNombre.TabIndex = 2
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(76, 212)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(34, 13)
+        Me.Label5.TabIndex = 4
+        Me.Label5.Text = "Sexo:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(58, 185)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(52, 13)
+        Me.Label4.TabIndex = 3
+        Me.Label4.Text = "Teléfono:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(31, 61)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(79, 13)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "Nombre Oficial:"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(35, 33)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(75, 13)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Código Oficial:"
         '
         'Label7
         '
@@ -147,21 +311,11 @@ Partial Class FrmOficial
         Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Location = New System.Drawing.Point(176, 396)
+        Me.BtnGuardar.Location = New System.Drawing.Point(178, 366)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(55, 49)
         Me.BtnGuardar.TabIndex = 129
         Me.BtnGuardar.UseVisualStyleBackColor = False
-        '
-        'LblCancelar
-        '
-        Me.LblCancelar.AutoSize = True
-        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
-        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblCancelar.Location = New System.Drawing.Point(342, 376)
-        Me.LblCancelar.Name = "LblCancelar"
-        Me.LblCancelar.Size = New System.Drawing.Size(0, 15)
-        Me.LblCancelar.TabIndex = 131
         '
         'BtnNuevo
         '
@@ -172,21 +326,11 @@ Partial Class FrmOficial
         Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNuevo.Location = New System.Drawing.Point(99, 396)
+        Me.BtnNuevo.Location = New System.Drawing.Point(101, 366)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(55, 49)
         Me.BtnNuevo.TabIndex = 130
         Me.BtnNuevo.UseVisualStyleBackColor = False
-        '
-        'LblEditar
-        '
-        Me.LblEditar.AutoSize = True
-        Me.LblEditar.BackColor = System.Drawing.Color.Transparent
-        Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEditar.Location = New System.Drawing.Point(263, 376)
-        Me.LblEditar.Name = "LblEditar"
-        Me.LblEditar.Size = New System.Drawing.Size(0, 15)
-        Me.LblEditar.TabIndex = 132
         '
         'BtnEditar
         '
@@ -197,21 +341,11 @@ Partial Class FrmOficial
         Me.BtnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEditar.Location = New System.Drawing.Point(256, 396)
+        Me.BtnEditar.Location = New System.Drawing.Point(258, 366)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(55, 49)
         Me.BtnEditar.TabIndex = 128
         Me.BtnEditar.UseVisualStyleBackColor = False
-        '
-        'LblGuardar
-        '
-        Me.LblGuardar.AutoSize = True
-        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
-        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(183, 376)
-        Me.LblGuardar.Name = "LblGuardar"
-        Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
-        Me.LblGuardar.TabIndex = 133
         '
         'BtnCancelar
         '
@@ -222,145 +356,11 @@ Partial Class FrmOficial
         Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.Location = New System.Drawing.Point(341, 396)
+        Me.BtnCancelar.Location = New System.Drawing.Point(343, 366)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(55, 49)
         Me.BtnCancelar.TabIndex = 127
         Me.BtnCancelar.UseVisualStyleBackColor = False
-        '
-        'LblNuevo
-        '
-        Me.LblNuevo.AutoSize = True
-        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
-        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(106, 376)
-        Me.LblNuevo.Name = "LblNuevo"
-        Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
-        Me.LblNuevo.TabIndex = 134
-        '
-        'GbDatos
-        '
-        Me.GbDatos.Controls.Add(Me.TxtApellido)
-        Me.GbDatos.Controls.Add(Me.labelapellido)
-        Me.GbDatos.Controls.Add(Me.MtbTelefono)
-        Me.GbDatos.Controls.Add(Me.MtbCodOficial)
-        Me.GbDatos.Controls.Add(Me.CboSexo)
-        Me.GbDatos.Controls.Add(Me.TxtDireccion)
-        Me.GbDatos.Controls.Add(Me.TxtNombre)
-        Me.GbDatos.Controls.Add(Me.Label5)
-        Me.GbDatos.Controls.Add(Me.Label4)
-        Me.GbDatos.Controls.Add(Me.Label3)
-        Me.GbDatos.Controls.Add(Me.Label2)
-        Me.GbDatos.Controls.Add(Me.Label1)
-        Me.GbDatos.Location = New System.Drawing.Point(85, 107)
-        Me.GbDatos.Name = "GbDatos"
-        Me.GbDatos.Size = New System.Drawing.Size(314, 253)
-        Me.GbDatos.TabIndex = 0
-        Me.GbDatos.TabStop = False
-        Me.GbDatos.Text = "Datos Oficial"
-        '
-        'TxtApellido
-        '
-        Me.TxtApellido.Location = New System.Drawing.Point(111, 84)
-        Me.TxtApellido.Name = "TxtApellido"
-        Me.TxtApellido.Size = New System.Drawing.Size(159, 20)
-        Me.TxtApellido.TabIndex = 3
-        '
-        'labelapellido
-        '
-        Me.labelapellido.AutoSize = True
-        Me.labelapellido.Location = New System.Drawing.Point(31, 87)
-        Me.labelapellido.Name = "labelapellido"
-        Me.labelapellido.Size = New System.Drawing.Size(79, 13)
-        Me.labelapellido.TabIndex = 12
-        Me.labelapellido.Text = "Apellido Oficial:"
-        '
-        'MtbTelefono
-        '
-        Me.MtbTelefono.Location = New System.Drawing.Point(111, 182)
-        Me.MtbTelefono.Mask = "00-00-00-00"
-        Me.MtbTelefono.Name = "MtbTelefono"
-        Me.MtbTelefono.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.MtbTelefono.Size = New System.Drawing.Size(159, 20)
-        Me.MtbTelefono.TabIndex = 5
-        '
-        'MtbCodOficial
-        '
-        Me.MtbCodOficial.Location = New System.Drawing.Point(111, 31)
-        Me.MtbCodOficial.Mask = "0000-0000-00000"
-        Me.MtbCodOficial.Name = "MtbCodOficial"
-        Me.MtbCodOficial.PromptChar = Global.Microsoft.VisualBasic.ChrW(32)
-        Me.MtbCodOficial.Size = New System.Drawing.Size(159, 20)
-        Me.MtbCodOficial.TabIndex = 1
-        '
-        'CboSexo
-        '
-        Me.CboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.CboSexo.FormattingEnabled = True
-        Me.CboSexo.Location = New System.Drawing.Point(111, 209)
-        Me.CboSexo.Name = "CboSexo"
-        Me.CboSexo.Size = New System.Drawing.Size(156, 21)
-        Me.CboSexo.TabIndex = 6
-        '
-        'TxtDireccion
-        '
-        Me.TxtDireccion.Location = New System.Drawing.Point(111, 114)
-        Me.TxtDireccion.Multiline = True
-        Me.TxtDireccion.Name = "TxtDireccion"
-        Me.TxtDireccion.Size = New System.Drawing.Size(159, 61)
-        Me.TxtDireccion.TabIndex = 4
-        '
-        'TxtNombre
-        '
-        Me.TxtNombre.Location = New System.Drawing.Point(111, 58)
-        Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(159, 20)
-        Me.TxtNombre.TabIndex = 2
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(76, 212)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(34, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Sexo:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(58, 185)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(52, 13)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Teléfono:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(55, 116)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(55, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Dirección:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(31, 61)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(79, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Nombre Oficial:"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(35, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Código Oficial:"
         '
         'TabPage2
         '
@@ -434,7 +434,7 @@ Partial Class FrmOficial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(509, 481)
+        Me.ClientSize = New System.Drawing.Size(509, 483)
         Me.Controls.Add(Me.TbcOficial)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -455,26 +455,9 @@ Partial Class FrmOficial
     Friend WithEvents TbcOficial As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents BtnGuardar As Button
-    Friend WithEvents LblCancelar As Label
     Friend WithEvents BtnNuevo As Button
-    Friend WithEvents LblEditar As Label
     Friend WithEvents BtnEditar As Button
-    Friend WithEvents LblGuardar As Label
     Friend WithEvents BtnCancelar As Button
-    Friend WithEvents LblNuevo As Label
-    Friend WithEvents GbDatos As GroupBox
-    Friend WithEvents TxtApellido As TextBox
-    Friend WithEvents labelapellido As Label
-    Friend WithEvents MtbTelefono As MaskedTextBox
-    Friend WithEvents MtbCodOficial As MaskedTextBox
-    Friend WithEvents CboSexo As ComboBox
-    Friend WithEvents TxtDireccion As TextBox
-    Friend WithEvents TxtNombre As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents LsvMostrarOficial As ListView
     Friend WithEvents ChCodigo As ColumnHeader
@@ -488,4 +471,21 @@ Partial Class FrmOficial
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents BtnCerrar As Button
+    Friend WithEvents GbDatos As GroupBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TxtDireccion As TextBox
+    Friend WithEvents TxtApellido As TextBox
+    Friend WithEvents labelapellido As Label
+    Friend WithEvents MtbTelefono As MaskedTextBox
+    Friend WithEvents MtbCodOficial As MaskedTextBox
+    Friend WithEvents CboSexo As ComboBox
+    Friend WithEvents TxtNombre As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents LblCancelar As Label
+    Friend WithEvents LblEditar As Label
+    Friend WithEvents LblGuardar As Label
+    Friend WithEvents LblNuevo As Label
 End Class

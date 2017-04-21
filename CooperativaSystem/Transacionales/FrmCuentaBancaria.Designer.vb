@@ -78,7 +78,7 @@ Partial Class FrmCuentaBancaria
         Me.LblEditar.AutoSize = True
         Me.LblEditar.BackColor = System.Drawing.Color.Transparent
         Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblEditar.Location = New System.Drawing.Point(351, 307)
+        Me.LblEditar.Location = New System.Drawing.Point(347, 307)
         Me.LblEditar.Name = "LblEditar"
         Me.LblEditar.Size = New System.Drawing.Size(0, 15)
         Me.LblEditar.TabIndex = 124
@@ -88,7 +88,7 @@ Partial Class FrmCuentaBancaria
         Me.LblGuardar.AutoSize = True
         Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
         Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblGuardar.Location = New System.Drawing.Point(254, 307)
+        Me.LblGuardar.Location = New System.Drawing.Point(242, 307)
         Me.LblGuardar.Name = "LblGuardar"
         Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
         Me.LblGuardar.TabIndex = 125
@@ -98,7 +98,7 @@ Partial Class FrmCuentaBancaria
         Me.LblNuevo.AutoSize = True
         Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
         Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNuevo.Location = New System.Drawing.Point(181, 307)
+        Me.LblNuevo.Location = New System.Drawing.Point(150, 307)
         Me.LblNuevo.Name = "LblNuevo"
         Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
         Me.LblNuevo.TabIndex = 126
@@ -127,7 +127,7 @@ Partial Class FrmCuentaBancaria
         Me.BtnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEditar.Location = New System.Drawing.Point(346, 241)
+        Me.BtnEditar.Location = New System.Drawing.Point(342, 241)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(55, 49)
         Me.BtnEditar.TabIndex = 120
@@ -142,7 +142,7 @@ Partial Class FrmCuentaBancaria
         Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Location = New System.Drawing.Point(252, 241)
+        Me.BtnGuardar.Location = New System.Drawing.Point(240, 241)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(55, 49)
         Me.BtnGuardar.TabIndex = 121
@@ -157,7 +157,7 @@ Partial Class FrmCuentaBancaria
         Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNuevo.Location = New System.Drawing.Point(175, 241)
+        Me.BtnNuevo.Location = New System.Drawing.Point(144, 241)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(55, 49)
         Me.BtnNuevo.TabIndex = 122
@@ -235,7 +235,7 @@ Partial Class FrmCuentaBancaria
         '
         'LsvCuentaBancaria
         '
-        Me.LsvCuentaBancaria.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.LsvCuentaBancaria.BackColor = System.Drawing.Color.White
         Me.LsvCuentaBancaria.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChCodigoCuenta, Me.ChSaldoActual, Me.ChTipoCuenta, Me.ChSocio, Me.ChNombreS})
         Me.LsvCuentaBancaria.ContextMenuStrip = Me.CmsOpciones
         Me.LsvCuentaBancaria.FullRowSelect = True

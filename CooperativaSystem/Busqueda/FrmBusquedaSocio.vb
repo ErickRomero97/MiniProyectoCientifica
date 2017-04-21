@@ -31,7 +31,7 @@ Public Class FrmBusquedaSocio
                         .SubItems.Add(VerSocio("LugarTrabajo").ToString)
                         .SubItems.Add(VerSocio("Correo").ToString)
                         .SubItems.Add(VerSocio("Sexo").ToString)
-                        .SubItems.Add(VerSocio("Estado").ToString)
+                        .SubItems.Add(VerSocio("EstadoCivil").ToString)
                         .SubItems.Add(VerSocio("Nacionalidad").ToString)
                         .SubItems.Add(VerSocio("Profesion").ToString)
                     End With

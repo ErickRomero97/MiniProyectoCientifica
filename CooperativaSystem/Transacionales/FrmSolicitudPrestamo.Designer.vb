@@ -26,6 +26,10 @@ Partial Class FrmSolicitudPrestamo
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSolicitudPrestamo))
         Me.TbPrestamo = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.LblCancelar = New System.Windows.Forms.Label()
+        Me.LblEditar = New System.Windows.Forms.Label()
+        Me.LblGuardar = New System.Windows.Forms.Label()
+        Me.LblNuevo = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.BtnCerrar = New System.Windows.Forms.Button()
         Me.TxtCantAvales = New System.Windows.Forms.TextBox()
@@ -120,6 +124,10 @@ Partial Class FrmSolicitudPrestamo
         '
         Me.TabPage1.BackgroundImage = CType(resources.GetObject("TabPage1.BackgroundImage"), System.Drawing.Image)
         Me.TabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TabPage1.Controls.Add(Me.LblCancelar)
+        Me.TabPage1.Controls.Add(Me.LblEditar)
+        Me.TabPage1.Controls.Add(Me.LblGuardar)
+        Me.TabPage1.Controls.Add(Me.LblNuevo)
         Me.TabPage1.Controls.Add(Me.Label17)
         Me.TabPage1.Controls.Add(Me.BtnCerrar)
         Me.TabPage1.Controls.Add(Me.TxtCantAvales)
@@ -138,6 +146,46 @@ Partial Class FrmSolicitudPrestamo
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Gestión Préstamo"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'LblCancelar
+        '
+        Me.LblCancelar.AutoSize = True
+        Me.LblCancelar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCancelar.Location = New System.Drawing.Point(553, 611)
+        Me.LblCancelar.Name = "LblCancelar"
+        Me.LblCancelar.Size = New System.Drawing.Size(0, 15)
+        Me.LblCancelar.TabIndex = 143
+        '
+        'LblEditar
+        '
+        Me.LblEditar.AutoSize = True
+        Me.LblEditar.BackColor = System.Drawing.Color.Transparent
+        Me.LblEditar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblEditar.Location = New System.Drawing.Point(441, 611)
+        Me.LblEditar.Name = "LblEditar"
+        Me.LblEditar.Size = New System.Drawing.Size(0, 15)
+        Me.LblEditar.TabIndex = 144
+        '
+        'LblGuardar
+        '
+        Me.LblGuardar.AutoSize = True
+        Me.LblGuardar.BackColor = System.Drawing.Color.Transparent
+        Me.LblGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblGuardar.Location = New System.Drawing.Point(335, 611)
+        Me.LblGuardar.Name = "LblGuardar"
+        Me.LblGuardar.Size = New System.Drawing.Size(0, 15)
+        Me.LblGuardar.TabIndex = 145
+        '
+        'LblNuevo
+        '
+        Me.LblNuevo.AutoSize = True
+        Me.LblNuevo.BackColor = System.Drawing.Color.Transparent
+        Me.LblNuevo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNuevo.Location = New System.Drawing.Point(233, 611)
+        Me.LblNuevo.Name = "LblNuevo"
+        Me.LblNuevo.Size = New System.Drawing.Size(0, 15)
+        Me.LblNuevo.TabIndex = 146
         '
         'Label17
         '
@@ -182,7 +230,7 @@ Partial Class FrmSolicitudPrestamo
         Me.BtnGuardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Location = New System.Drawing.Point(354, 572)
+        Me.BtnGuardar.Location = New System.Drawing.Point(327, 557)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(55, 49)
         Me.BtnGuardar.TabIndex = 134
@@ -197,7 +245,7 @@ Partial Class FrmSolicitudPrestamo
         Me.BtnNuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnNuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnNuevo.Location = New System.Drawing.Point(277, 572)
+        Me.BtnNuevo.Location = New System.Drawing.Point(225, 557)
         Me.BtnNuevo.Name = "BtnNuevo"
         Me.BtnNuevo.Size = New System.Drawing.Size(55, 49)
         Me.BtnNuevo.TabIndex = 135
@@ -212,7 +260,7 @@ Partial Class FrmSolicitudPrestamo
         Me.BtnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnEditar.Location = New System.Drawing.Point(434, 572)
+        Me.BtnEditar.Location = New System.Drawing.Point(433, 557)
         Me.BtnEditar.Name = "BtnEditar"
         Me.BtnEditar.Size = New System.Drawing.Size(55, 49)
         Me.BtnEditar.TabIndex = 133
@@ -227,7 +275,7 @@ Partial Class FrmSolicitudPrestamo
         Me.BtnCancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnCancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnCancelar.Location = New System.Drawing.Point(515, 572)
+        Me.BtnCancelar.Location = New System.Drawing.Point(545, 557)
         Me.BtnCancelar.Name = "BtnCancelar"
         Me.BtnCancelar.Size = New System.Drawing.Size(55, 49)
         Me.BtnCancelar.TabIndex = 132
@@ -648,6 +696,7 @@ Partial Class FrmSolicitudPrestamo
         Me.LsvPrestamo.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChNumPrestamo, Me.ChFechaSolicitud, Me.ChTipoPrestamo, Me.ChCodigoSocio, Me.ChNombre, Me.ChRTN, Me.ChNacionalidad, Me.ChEstadoCivil, Me.ChDireccion, Me.ChSumaSolicitada, Me.ChSumaOtorgada, Me.ChPlazo, Me.ChInteres, Me.CHFinalidad, Me.ChFechaExpiracion})
         Me.LsvPrestamo.ContextMenuStrip = Me.CmsOpciones
         Me.LsvPrestamo.FullRowSelect = True
+        Me.LsvPrestamo.GridLines = True
         Me.LsvPrestamo.Location = New System.Drawing.Point(0, 4)
         Me.LsvPrestamo.Name = "LsvPrestamo"
         Me.LsvPrestamo.Size = New System.Drawing.Size(1217, 628)
@@ -843,4 +892,8 @@ Partial Class FrmSolicitudPrestamo
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Label17 As Label
     Friend WithEvents BtnCerrar As Button
+    Friend WithEvents LblCancelar As Label
+    Friend WithEvents LblEditar As Label
+    Friend WithEvents LblGuardar As Label
+    Friend WithEvents LblNuevo As Label
 End Class

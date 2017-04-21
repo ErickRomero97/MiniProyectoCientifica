@@ -195,7 +195,7 @@ Partial Class FrmNacionalidad
         '
         'LsvNac
         '
-        Me.LsvNac.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.LsvNac.BackColor = System.Drawing.Color.White
         Me.LsvNac.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ChIdNacionalidad, Me.ChNombreNac})
         Me.LsvNac.ContextMenuStrip = Me.CmsOpciones
         Me.LsvNac.FullRowSelect = True

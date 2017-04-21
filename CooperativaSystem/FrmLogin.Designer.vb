@@ -30,6 +30,8 @@ Partial Class FrmLogin
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'BtnSalir
@@ -59,9 +61,9 @@ Partial Class FrmLogin
         Me.TxtPassword.Location = New System.Drawing.Point(134, 168)
         Me.TxtPassword.Multiline = True
         Me.TxtPassword.Name = "TxtPassword"
+        Me.TxtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.TxtPassword.Size = New System.Drawing.Size(209, 25)
         Me.TxtPassword.TabIndex = 6
-        Me.TxtPassword.Text = "Password"
         '
         'TxtUser
         '
@@ -75,7 +77,6 @@ Partial Class FrmLogin
         Me.TxtUser.Size = New System.Drawing.Size(209, 25)
         Me.TxtUser.TabIndex = 5
         Me.TxtUser.Tag = ""
-        Me.TxtUser.Text = "UserName"
         '
         'Panel1
         '
@@ -109,6 +110,30 @@ Partial Class FrmLogin
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Inicio De Sesión"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label2.Location = New System.Drawing.Point(137, 60)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(85, 18)
+        Me.Label2.TabIndex = 12
+        Me.Label2.Text = "Username"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.Label3.Location = New System.Drawing.Point(139, 148)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(83, 18)
+        Me.Label3.TabIndex = 13
+        Me.Label3.Text = "Password"
+        '
         'FrmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -116,6 +141,8 @@ Partial Class FrmLogin
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(556, 293)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
@@ -143,4 +170,6 @@ Partial Class FrmLogin
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

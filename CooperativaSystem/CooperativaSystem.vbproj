@@ -131,6 +131,12 @@
     <Compile Include="Catalogos\FrmSocio.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmLogAuditoria.Designer.vb">
+      <DependentUpon>FrmLogAuditoria.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogAuditoria.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmLogin.Designer.vb">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </Compile>
@@ -141,12 +147,6 @@
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MDIParent1.Designer.vb">
-      <DependentUpon>MDIParent1.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MDIParent1.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Transacionales\FrmSolicitudPrestamo.Designer.vb">
@@ -235,14 +235,14 @@
     <EmbeddedResource Include="Catalogos\FrmSocio.resx">
       <DependentUpon>FrmSocio.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogAuditoria.resx">
+      <DependentUpon>FrmLogAuditoria.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MDIParent1.resx">
-      <DependentUpon>MDIParent1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transacionales\FrmSolicitudPrestamo.resx">
       <DependentUpon>FrmSolicitudPrestamo.vb</DependentUpon>

@@ -160,7 +160,7 @@ Public Class FrmCuentaBancaria
                         .Parameters.Add("@SaldoActual", SqlDbType.Decimal, 10).Value = CDec(TxtSaldoAc.Text)
                         .Parameters.Add("@IdTipoCuenta", SqlDbType.Int).Value = CInt(CboTipoCuenta.SelectedValue)
                         .Parameters.Add("@CodSocio", SqlDbType.NVarChar, 15).Value = CboSocio.SelectedValue
-                        .Parameters.Add("@IdUsuario", SqlDbType.Int).Value = 1
+                        .Parameters.Add("@IdUsuario", SqlDbType.Int).Value = CInt(FrmPrincipal.LblIdUsuario.Text)
                         .ExecuteNonQuery()
                         MessageBox.Show("se ha ingresado un nueva cuenta bancario", "Cooperativa System", MessageBoxButtons.OK)
                     End With

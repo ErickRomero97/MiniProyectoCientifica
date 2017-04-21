@@ -4,6 +4,7 @@ Public Class FrmOficial
         Call HabilitarBotones(True, False, False, False, False)
         Call LlenarComboSexo()
         Call MostrarOficial()
+        CboSexo.SelectedValue = -1
     End Sub
 
     Sub HabilitarBotones(ByVal Nuevo As Boolean, ByVal Guardar As Boolean, ByVal Modificar As Boolean, ByVal Cancelar As Boolean, ByVal Groupbox As Boolean)
@@ -299,4 +300,6 @@ Public Class FrmOficial
     Private Sub BtnCerrar_Click(sender As Object, e As EventArgs) Handles BtnCerrar.Click
         Me.Close()
     End Sub
+
+
 End Class
